@@ -38,8 +38,8 @@
 		280214D71C42F4030089EB0B = {
 			isa = PBXGroup;
 			children = (
-				280214E21C42F4030089EB0B /* hanze-ov-ios */,
 				280214E11C42F4030089EB0B /* Products */,
+				280214E21C42F4030089EB0B /* hanze-ov-ios */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +54,14 @@
 		280214E21C42F4030089EB0B /* hanze-ov-ios */ = {
 			isa = PBXGroup;
 			children = (
-				280214EC1C42F4030089EB0B /* LaunchScreen.storyboard */,
-				280214E71C42F4030089EB0B /* Main.storyboard */,
-				280214E31C42F4030089EB0B /* AppDelegate.swift */,
-				280214EA1C42F4030089EB0B /* Assets.xcassets */,
 				280214F71C42F54F0089EB0B /* helpers */,
 				280214F51C42F53E0089EB0B /* supporting files */,
 				280214F61C42F5450089EB0B /* viewcontrollers */,
 				280214F81C42F5580089EB0B /* views */,
+				280214E31C42F4030089EB0B /* AppDelegate.swift */,
+				280214EA1C42F4030089EB0B /* Assets.xcassets */,
+				280214EC1C42F4030089EB0B /* LaunchScreen.storyboard */,
+				280214E71C42F4030089EB0B /* Main.storyboard */,
 			);
 			path = "hanze-ov-ios";
 			sourceTree = "<group>";
@@ -71,7 +71,7 @@
 			children = (
 				280214EF1C42F4030089EB0B /* Info.plist */,
 			);
-			name = "supporting files";
+			path = "supporting files";
 			sourceTree = "<group>";
 		};
 		280214F61C42F5450089EB0B /* viewcontrollers */ = {
@@ -79,21 +79,21 @@
 			children = (
 				280214E51C42F4030089EB0B /* ViewController.swift */,
 			);
-			name = viewcontrollers;
+			path = viewcontrollers;
 			sourceTree = "<group>";
 		};
 		280214F71C42F54F0089EB0B /* helpers */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = helpers;
+			path = helpers;
 			sourceTree = "<group>";
 		};
 		280214F81C42F5580089EB0B /* views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = views;
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +181,7 @@
 				280214E81C42F4030089EB0B /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		280214EC1C42F4030089EB0B /* LaunchScreen.storyboard */ = {
@@ -189,6 +190,7 @@
 				280214ED1C42F4030089EB0B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -279,7 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "hanze-ov-ios/Info.plist";
+				INFOPLIST_FILE = "hanze-ov-ios/supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.markuswind.hanze-ov-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,7 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "hanze-ov-ios/Info.plist";
+				INFOPLIST_FILE = "hanze-ov-ios/supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.markuswind.hanze-ov-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -316,6 +318,7 @@
 				280214F41C42F4030089EB0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
