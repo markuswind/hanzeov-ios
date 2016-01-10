@@ -54,14 +54,46 @@
 		280214E21C42F4030089EB0B /* hanze-ov-ios */ = {
 			isa = PBXGroup;
 			children = (
-				280214E31C42F4030089EB0B /* AppDelegate.swift */,
-				280214E51C42F4030089EB0B /* ViewController.swift */,
-				280214E71C42F4030089EB0B /* Main.storyboard */,
-				280214EA1C42F4030089EB0B /* Assets.xcassets */,
 				280214EC1C42F4030089EB0B /* LaunchScreen.storyboard */,
-				280214EF1C42F4030089EB0B /* Info.plist */,
+				280214E71C42F4030089EB0B /* Main.storyboard */,
+				280214E31C42F4030089EB0B /* AppDelegate.swift */,
+				280214EA1C42F4030089EB0B /* Assets.xcassets */,
+				280214F71C42F54F0089EB0B /* helpers */,
+				280214F51C42F53E0089EB0B /* supporting files */,
+				280214F61C42F5450089EB0B /* viewcontrollers */,
+				280214F81C42F5580089EB0B /* views */,
 			);
 			path = "hanze-ov-ios";
+			sourceTree = "<group>";
+		};
+		280214F51C42F53E0089EB0B /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				280214EF1C42F4030089EB0B /* Info.plist */,
+			);
+			name = "supporting files";
+			sourceTree = "<group>";
+		};
+		280214F61C42F5450089EB0B /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				280214E51C42F4030089EB0B /* ViewController.swift */,
+			);
+			name = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		280214F71C42F54F0089EB0B /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
+		280214F81C42F5580089EB0B /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
