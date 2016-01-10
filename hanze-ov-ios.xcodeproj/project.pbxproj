@@ -12,7 +12,23 @@
 		280214E91C42F4030089EB0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280214E71C42F4030089EB0B /* Main.storyboard */; };
 		280214EB1C42F4030089EB0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280214EA1C42F4030089EB0B /* Assets.xcassets */; };
 		280214EE1C42F4030089EB0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280214EC1C42F4030089EB0B /* LaunchScreen.storyboard */; };
+		280214FA1C42F7810089EB0B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280214F91C42F7810089EB0B /* Alamofire.framework */; };
+		280214FB1C42F7810089EB0B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 280214F91C42F7810089EB0B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		280214FC1C42F7810089EB0B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				280214FB1C42F7810089EB0B /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		280214E01C42F4030089EB0B /* hanze-ov-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hanze-ov-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,7 @@
 		280214EA1C42F4030089EB0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280214ED1C42F4030089EB0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280214EF1C42F4030089EB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280214F91C42F7810089EB0B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280214FA1C42F7810089EB0B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +56,7 @@
 		280214D71C42F4030089EB0B = {
 			isa = PBXGroup;
 			children = (
+				280214F91C42F7810089EB0B /* Alamofire.framework */,
 				280214E11C42F4030089EB0B /* Products */,
 				280214E21C42F4030089EB0B /* hanze-ov-ios */,
 			);
@@ -106,6 +125,7 @@
 				280214DC1C42F4030089EB0B /* Sources */,
 				280214DD1C42F4030089EB0B /* Frameworks */,
 				280214DE1C42F4030089EB0B /* Resources */,
+				280214FC1C42F7810089EB0B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,6 +301,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "hanze-ov-ios/supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.markuswind.hanze-ov-ios";
@@ -292,6 +316,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "hanze-ov-ios/supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.markuswind.hanze-ov-ios";
