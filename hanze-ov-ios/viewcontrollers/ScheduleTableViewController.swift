@@ -24,12 +24,12 @@ class ScheduleTableViewController: UITableViewController {
     }
 
     private func themeTableView() {
-        tableView.backgroundColor = UIColor(red:0.96, green:0.82, blue:0.4, alpha:1)
-        tableView.separatorColor = UIColor(red: 0.89, green: 0.48, blue:0.49, alpha:1)
+        tableView.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 1)
+        tableView.separatorColor = UIColor(red: 0.89, green: 0.48, blue: 0.49, alpha: 1)
 
         tableView.layer.borderWidth = 0.5
         tableView.layer.cornerRadius = 4.0
-        tableView.layer.borderColor = UIColor(red:0.89, green:0.48, blue:0.49, alpha:1).CGColor
+        tableView.layer.borderColor = UIColor(red: 0.89, green: 0.48, blue: 0.49, alpha: 1).CGColor
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,10 +52,10 @@ class ScheduleOptionCell: UITableViewCell {
 
     override func awakeFromNib() {
         let selectedBackgroundColorView = UIView()
-        selectedBackgroundColorView.backgroundColor = UIColor(red:0.96, green:0.82, blue:0.4, alpha:0.8)
+        selectedBackgroundColorView.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 0.8)
 
         selectedBackgroundView = selectedBackgroundColorView
-        backgroundColor = UIColor(red:0.97, green:0.77, blue:0.36, alpha:1)
+        backgroundColor = UIColor(red: 0.97, green: 0.77, blue: 0.36, alpha: 1)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
