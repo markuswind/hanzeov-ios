@@ -87,14 +87,14 @@ class SelectTableViewController: UITableViewController {
         case .Institute:
             selectState = .Class
 
+            setupTableView()
+            
             break
         case .Class:
             self.performSegueWithIdentifier("classSelectedSeque", sender: self)
 
             break
         }
-
-        setupTableView()
 
         return indexPath
     }

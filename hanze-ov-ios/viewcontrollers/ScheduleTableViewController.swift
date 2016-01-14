@@ -16,6 +16,8 @@ enum ScheduleSelectState {
 
 class ScheduleTableViewController: UITableViewController {
 
+    var selectState: ScheduleSelectState = .Schedule
+
     override func viewDidLoad() {
         themeTableView()
 
@@ -32,14 +34,76 @@ class ScheduleTableViewController: UITableViewController {
         tableView.layer.borderColor = UIColor(red: 0.89, green: 0.48, blue: 0.49, alpha: 1).CGColor
     }
 
+    private func setupTableView() {
+        switch selectState {
+        case .Schedule:
+            setupScheduleSelection()
+
+            break
+        case .Journy:
+            setupJournySelection()
+
+            break
+        }
+    }
+
+    private func setupScheduleSelection() {
+        tableView.registerNib(UINib(nibName: "ScheduleOptionCell", bundle: nil), forCellReuseIdentifier: "ScheduleOptionCell")
+        tableView.rowHeight = 70.0
+    }
+
+    private func setupJournySelection() {
+        tableView.registerNib(UINib(nibName: "JournyOptionCell", bundle: nil), forCellReuseIdentifier: "JournyOptionCell")
+        tableView.rowHeight = 80.0
+
+        reloadTableData()
+    }
+
+    private func reloadTableData() {
+        UIView.transitionWithView(tableView, duration:0.65, options:.TransitionCrossDissolve,
+            animations: { () -> Void in
+                self.tableView.reloadData()
+            },
+        completion: nil)
+    }
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        switch selectState {
+        case .Schedule:
+            return 10
+        case .Journy:
+            return 5
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ScheduleOptionCell", forIndexPath: indexPath) as! ScheduleOptionCell
+        var cell: UITableViewCell
+
+        switch selectState {
+        case .Schedule:
+            cell = tableView.dequeueReusableCellWithIdentifier("ScheduleOptionCell", forIndexPath: indexPath) as! ScheduleOptionCell
+            break
+        case .Journy:
+            cell = tableView.dequeueReusableCellWithIdentifier("JournyOptionCell", forIndexPath: indexPath) as! JournyOptionCell
+            break
+        }
 
         return cell
+    }
+
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        switch selectState {
+        case .Schedule:
+            selectState = .Journy
+            
+            setupTableView()
+
+            break
+        case .Journy:
+            break
+        }
+
+        return indexPath
     }
 
 }
