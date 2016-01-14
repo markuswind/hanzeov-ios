@@ -72,12 +72,24 @@ class SelectTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: UITableViewCell
 
+        let selectedBackgroundView = UIView()
+
         switch selectState {
         case .Institute:
             cell = tableView.dequeueReusableCellWithIdentifier("InstituteOptionCell", forIndexPath: indexPath) as! InstituteOptionCell
         case .Class:
             cell = tableView.dequeueReusableCellWithIdentifier("ClassOptionCell", forIndexPath: indexPath) as! ClassOptionCell
         }
+
+        if (indexPath.row % 2 == 0) {
+            cell.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 1.0)
+            selectedBackgroundView.backgroundColor = UIColor(red: 0.96, green: 0.75, blue: 0.4, alpha: 0.8)
+        } else {
+            cell.backgroundColor = UIColor(red: 0.96, green: 0.75, blue: 0.4, alpha: 1.0)
+            selectedBackgroundView.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 0.8)
+        }
+
+        cell.selectedBackgroundView = selectedBackgroundView
 
         return cell
     }
@@ -116,7 +128,6 @@ class InstituteOptionCell: UITableViewCell {
         selectedBackgroundColorView.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 0.8)
 
         selectedBackgroundView = selectedBackgroundColorView
-        backgroundColor = UIColor(red: 0.97, green: 0.77, blue: 0.36, alpha: 1)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -135,23 +146,5 @@ class ClassOptionCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
 
     var id: String?
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-        let selectedBackgroundColorView = UIView()
-        selectedBackgroundColorView.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 0.8)
-
-        selectedBackgroundView = selectedBackgroundColorView
-        backgroundColor = UIColor(red: 0.97, green: 0.77, blue: 0.36, alpha: 1)
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
 
 }

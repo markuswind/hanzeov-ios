@@ -77,6 +77,7 @@ class ScheduleTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let selectedBackgroundView = UIView()
         var cell: UITableViewCell
 
         switch selectState {
@@ -87,6 +88,16 @@ class ScheduleTableViewController: UITableViewController {
             cell = tableView.dequeueReusableCellWithIdentifier("JournyOptionCell", forIndexPath: indexPath) as! JournyOptionCell
             break
         }
+
+        if (indexPath.row % 2 == 0) {
+            cell.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 1.0)
+            selectedBackgroundView.backgroundColor = UIColor(red: 0.96, green: 0.75, blue: 0.4, alpha: 0.8)
+        } else {
+            cell.backgroundColor = UIColor(red: 0.96, green: 0.75, blue: 0.4, alpha: 1.0)
+            selectedBackgroundView.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 0.8)
+        }
+
+        cell.selectedBackgroundView = selectedBackgroundView
 
         return cell
     }
@@ -121,7 +132,6 @@ class ScheduleOptionCell: UITableViewCell {
         selectedBackgroundColorView.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 0.8)
 
         selectedBackgroundView = selectedBackgroundColorView
-        backgroundColor = UIColor(red: 0.97, green: 0.77, blue: 0.36, alpha: 1)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -142,21 +152,5 @@ class JournyOptionCell: UITableViewCell {
     @IBOutlet var boardingTimeLabel: UILabel!
     @IBOutlet var arrivingTimeLabel: UILabel!
     @IBOutlet var timeUntilLabel: UILabel!
-
-    override func awakeFromNib() {
-        let selectedBackgroundColorView = UIView()
-        selectedBackgroundColorView.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 0.8)
-
-        selectedBackgroundView = selectedBackgroundColorView
-        backgroundColor = UIColor(red: 0.97, green: 0.77, blue: 0.36, alpha: 1)
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
 
 }
