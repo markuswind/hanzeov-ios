@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="YHG-Ty-O7b">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClassOptionCell" rowHeight="55" id="YHG-Ty-O7b" customClass="ClassOptionCell" customModule="hanze_ov_ios" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YHG-Ty-O7b" id="9af-Ty-ieF">
@@ -28,6 +28,10 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="6QB-3u-x0h" id="RKy-Jp-Pqk"/>
+                <outlet property="yearLabel" destination="oCZ-wl-b0R" id="qwC-Zq-4HU"/>
+            </connections>
             <point key="canvasLocation" x="317" y="260.5"/>
         </tableViewCell>
     </objects>
