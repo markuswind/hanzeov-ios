@@ -100,6 +100,8 @@ class ScheduleTableViewController: UITableViewController {
 
             break
         case .Journy:
+            performSegueWithIdentifier("JournySelectedSegue", sender: self)
+
             break
         }
 
