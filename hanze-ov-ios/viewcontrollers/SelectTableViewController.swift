@@ -15,7 +15,7 @@ enum SelectState {
 
 class SelectTableViewController: UITableViewController {
 
-    var selectState: SelectState = .Class
+    var selectState: SelectState = .Institute
 
     override func viewDidLoad() {
         themeTableView()
@@ -48,6 +48,17 @@ class SelectTableViewController: UITableViewController {
     private func setupClassSelection() {
         tableView.registerNib(UINib(nibName: "ClassOptionCell", bundle: nil), forCellReuseIdentifier: "ClassOptionCell")
         tableView.rowHeight = 55.0
+
+        reloadTableData()
+    }
+
+    private func reloadTableData() {
+        UIView.transitionWithView(tableView, duration:0.65, options:.TransitionCrossDissolve,
+            animations: { () -> Void in
+                self.tableView.reloadData()
+            },
+            completion: nil
+        )
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,7 +84,16 @@ class SelectTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        print("indexPath: \(indexPath.row)")
+        switch selectState {
+        case .Institute:
+            selectState = .Class
+
+            break
+        case .Class:
+            break
+        }
+
+        setupTableView()
 
         return indexPath
     }
