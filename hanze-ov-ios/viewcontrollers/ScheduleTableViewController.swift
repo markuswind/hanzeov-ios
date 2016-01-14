@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+enum ScheduleSelectState {
+    case Schedule
+    case Journy
+}
+
 class ScheduleTableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -51,6 +56,33 @@ class ScheduleOptionCell: UITableViewCell {
 
         selectedBackgroundView = selectedBackgroundColorView
         backgroundColor = UIColor(red:0.97, green:0.77, blue:0.36, alpha:1)
+    }
+
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+
+}
+
+class JournyOptionCell: UITableViewCell {
+
+    @IBOutlet var vehicleImage: UIImageView!
+    @IBOutlet var boardingPointLabel: UILabel!
+    @IBOutlet var arrivingPointLabel: UILabel!
+    @IBOutlet var boardingTimeLabel: UILabel!
+    @IBOutlet var arrivingTimeLabel: UILabel!
+    @IBOutlet var timeUntilLabel: UILabel!
+
+    override func awakeFromNib() {
+        let selectedBackgroundColorView = UIView()
+        selectedBackgroundColorView.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 0.8)
+
+        selectedBackgroundView = selectedBackgroundColorView
+        backgroundColor = UIColor(red: 0.97, green: 0.77, blue: 0.36, alpha: 1)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
