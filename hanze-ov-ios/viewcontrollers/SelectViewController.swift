@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SelectViewController: UIViewController {
 
@@ -41,7 +42,6 @@ class SelectViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 

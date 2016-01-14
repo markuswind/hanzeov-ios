@@ -3,40 +3,58 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstituteOptionCell" rowHeight="60" id="yyy-yp-b0E" customClass="InstituteOptionCell" customModule="hanze_ov_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstituteOptionCell" rowHeight="65" id="yyy-yp-b0E" customClass="InstituteOptionCell" customModule="hanze_ov_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yyy-yp-b0E" id="MJ1-cZ-Ehe">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KcN-DW-yY3">
-                        <rect key="frame" x="8" y="8" width="40" height="40"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-institute.png" translatesAutoresizingMaskIntoConstraints="NO" id="KcN-DW-yY3">
+                        <rect key="frame" x="8" y="12" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="KcN-DW-yY3" secondAttribute="height" multiplier="1:1" id="WG4-FT-R89"/>
+                            <constraint firstAttribute="width" constant="40" id="ob2-qc-Vt5"/>
+                            <constraint firstAttribute="height" constant="40" id="zF6-dO-tof"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCMI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVo-je-Uqi">
-                        <rect key="frame" x="56" y="8" width="256" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCMI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZj-1h-koa">
+                        <rect key="frame" x="57" y="12" width="255" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instituut voor Communicatie, Media &amp; IT - SCMI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR9-qK-NV2">
-                        <rect key="frame" x="56" y="27" width="256" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instituut voor Communicatie, Media &amp; IT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfU-96-0dN">
+                        <rect key="frame" x="57" y="35" width="255" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="fZj-1h-koa" firstAttribute="leading" secondItem="KcN-DW-yY3" secondAttribute="trailing" constant="9" id="5ej-JR-tyJ"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="KcN-DW-yY3" secondAttribute="leading" id="6cN-Iq-aKN"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fZj-1h-koa" secondAttribute="trailing" id="7Ch-fH-Vn1"/>
+                    <constraint firstItem="KcN-DW-yY3" firstAttribute="centerY" secondItem="MJ1-cZ-Ehe" secondAttribute="centerY" id="9RH-WZ-iPo"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="IfU-96-0dN" secondAttribute="trailing" id="B2a-mB-uuv"/>
+                    <constraint firstItem="fZj-1h-koa" firstAttribute="top" secondItem="KcN-DW-yY3" secondAttribute="top" id="Xsf-hT-YWh"/>
+                    <constraint firstItem="IfU-96-0dN" firstAttribute="leading" secondItem="KcN-DW-yY3" secondAttribute="trailing" constant="9" id="kxl-WM-99g"/>
+                    <constraint firstItem="IfU-96-0dN" firstAttribute="top" secondItem="fZj-1h-koa" secondAttribute="bottom" constant="2" id="l1O-c8-zaa"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="descriptionLabel" destination="cR9-qK-NV2" id="f0j-uA-Pp0"/>
                 <outlet property="iconImage" destination="KcN-DW-yY3" id="lRr-yN-UDE"/>
-                <outlet property="nameLabel" destination="DVo-je-Uqi" id="nsj-LF-OeO"/>
             </connections>
-            <point key="canvasLocation" x="596" y="445"/>
+            <point key="canvasLocation" x="596" y="437.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="placeholder-institute.png" width="700" height="701"/>
+    </resources>
 </document>

@@ -29,23 +29,15 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HANZE OV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEs-ca-zMS">
                                 <rect key="frame" x="205" y="428" width="190" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A27-oa-lVW">
-                                <rect key="frame" x="267" y="559" width="66" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.7686274509803922" blue="0.29019607843137257" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="A27-oa-lVW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Bxm-YF-5Uo"/>
                             <constraint firstItem="Rfz-lM-UYV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XYE-Fx-7dm"/>
                             <constraint firstItem="Rfz-lM-UYV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ak9-VP-JkX"/>
                             <constraint firstItem="fEs-ca-zMS" firstAttribute="top" secondItem="Rfz-lM-UYV" secondAttribute="bottom" constant="8" id="d3w-Ac-9Z7"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="A27-oa-lVW" secondAttribute="bottom" constant="20" id="dv8-oi-1wo"/>
                             <constraint firstItem="fEs-ca-zMS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sSs-tN-7NV"/>
                         </constraints>
                     </view>
