@@ -57,8 +57,7 @@ class SelectTableViewController: UITableViewController {
             animations: { () -> Void in
                 self.tableView.reloadData()
             },
-            completion: nil
-        )
+        completion: nil)
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,6 +89,8 @@ class SelectTableViewController: UITableViewController {
 
             break
         case .Class:
+            self.performSegueWithIdentifier("classSelectedSeque", sender: self)
+
             break
         }
 
