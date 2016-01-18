@@ -21,6 +21,8 @@ class ScheduleTableViewController: UITableViewController {
     override func viewDidLoad() {
         themeTableView()
 
+        automaticallyAdjustsScrollViewInsets = false
+
         tableView.registerNib(UINib(nibName: "ScheduleOptionCell", bundle: nil), forCellReuseIdentifier: "ScheduleOptionCell")
         tableView.rowHeight = 70.0
     }
@@ -111,7 +113,8 @@ class ScheduleTableViewController: UITableViewController {
 
             break
         case .Journy:
-            performSegueWithIdentifier("JournySelectedSegue", sender: self)
+            let journyViewController = storyboard?.instantiateViewControllerWithIdentifier("JournyViewController")
+            navigationController?.pushViewController(journyViewController!, animated: true)
 
             break
         }

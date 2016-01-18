@@ -17,6 +17,7 @@ class SelectViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor(red:0.96, green:0.8, blue:0.36, alpha:1)
+        navigationController?.navigationBar.topItem?.title = "Instituut"
 
         // setup table view
         loadInstituteOptions()

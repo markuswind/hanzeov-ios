@@ -14,6 +14,8 @@ class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        automaticallyAdjustsScrollViewInsets = false
+
         view.backgroundColor = UIColor(red:0.96, green:0.8, blue:0.36, alpha:1)
     }
 

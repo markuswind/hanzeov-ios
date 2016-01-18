@@ -103,7 +103,8 @@ class SelectTableViewController: UITableViewController {
             
             break
         case .Class:
-            self.performSegueWithIdentifier("classSelectedSeque", sender: self)
+            let scheduleViewController = storyboard?.instantiateViewControllerWithIdentifier("ScheduleViewController")
+            navigationController?.pushViewController(scheduleViewController!, animated: true)
 
             break
         }
