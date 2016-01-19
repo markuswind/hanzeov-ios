@@ -19,7 +19,6 @@ class SelectViewController: UIViewController {
         view.backgroundColor = UIColor(red:0.96, green:0.8, blue:0.36, alpha:1)
         navigationController?.navigationBar.topItem?.title = "Instituut"
 
-        // setup table view
         loadInstituteOptions()
     }
 
@@ -41,7 +40,6 @@ class SelectViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

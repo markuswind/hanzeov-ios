@@ -100,6 +100,7 @@ class SelectTableViewController: UITableViewController {
             selectState = .Class
 
             setupTableView()
+            updateNavigationBar()
             
             break
         case .Class:
@@ -110,6 +111,17 @@ class SelectTableViewController: UITableViewController {
         }
 
         return indexPath
+    }
+
+    private func updateNavigationBar() {
+        let backButton = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "backButtonPressed")
+
+        navigationController?.navigationBar.topItem?.title = "Rooster"
+        navigationController?.navigationItem.leftBarButtonItem = backButton
+    }
+
+    private func backButtonPressed() {
+        print("backButtonPressed()")
     }
 
 }
