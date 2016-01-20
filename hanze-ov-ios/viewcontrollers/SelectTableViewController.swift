@@ -17,7 +17,7 @@ enum SelectState {
 class SelectTableViewController: UITableViewController {
 
     var selectState: SelectState = .Institute
-    var instituteOptions = [[String: AnyObject]]()
+    var instituteOptions: JSON = []
 
     override func viewDidLoad() {
         themeTableView()
@@ -50,11 +50,7 @@ class SelectTableViewController: UITableViewController {
     }
 
     private func fillInstituteOptions(result: JSON) {
-        print(result)
-
-        if let resultData = result[0].arrayObject {
-            instituteOptions = resultData as! [[String: AnyObject]]
-        }
+        instituteOptions = result
 
         reloadTableData()
     }
@@ -86,19 +82,30 @@ class SelectTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: UITableViewCell
 
-        let selectedBackgroundView = UIView()
-
         switch selectState {
         case .Institute:
-            cell = tableView.dequeueReusableCellWithIdentifier("InstituteOptionCell", forIndexPath: indexPath) as! InstituteOptionCell
+            let instituteOptionCell = tableView.dequeueReusableCellWithIdentifier("InstituteOptionCell", forIndexPath: indexPath) as! InstituteOptionCell
 
-            var dict = instituteOptions[indexPath.row]
-            print(dict["name"]!.stringValue)
+            let key: AnyObject = Array(self.instituteOptions.dictionaryValue.keys)[indexPath.row]
+            let value = self.instituteOptions[key as! String]
+
+            instituteOptionCell.nameLabel.text = value["code"].stringValue
+            instituteOptionCell.descriptionLabel.text = value["name"].stringValue
+
+            cell = instituteOptionCell
         case .Class:
             cell = tableView.dequeueReusableCellWithIdentifier("ClassOptionCell", forIndexPath: indexPath) as! ClassOptionCell
         }
 
-        if (indexPath.row % 2 == 0) {
+        styleTableCell(cell, row: indexPath.row)
+
+        return cell
+    }
+
+    private func styleTableCell(cell: UITableViewCell, row: Int) {
+        let selectedBackgroundView = UIView()
+
+        if (row % 2 == 0) {
             cell.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 1.0)
             selectedBackgroundView.backgroundColor = UIColor(red: 0.96, green: 0.75, blue: 0.4, alpha: 0.8)
         } else {
@@ -107,8 +114,6 @@ class SelectTableViewController: UITableViewController {
         }
 
         cell.selectedBackgroundView = selectedBackgroundView
-
-        return cell
     }
 
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
