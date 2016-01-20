@@ -7,8 +7,11 @@
 //
 
 import Alamofire
+import SwiftyJSON
 
 class Client {
+
+    let base_url = "http://localhost:8000"
 
     class var sharedClient: Client {
         struct Singleton {
@@ -18,12 +21,10 @@ class Client {
         return Singleton.instance
     }
 
-    private func performRequestWithMethod(method: Alamofire.Method, path: String, parameters: [String: AnyObject], completion: () -> ()) {
-        Alamofire.request(method, path, parameters: parameters).responseJSON { response in
+    func performRequestWithMethod(method: Alamofire.Method, path: String, parameters: [String: AnyObject]?, completion: (JSON) -> ()) {
+        Alamofire.request(method, base_url + path, parameters: parameters).responseJSON { response in
             if let _ = response.response {
-                if let rawObject = response.result.value as? NSDictionary {
-                    print(rawObject)
-                }
+                completion(JSON(response.result.value!))
             }
         }
     }

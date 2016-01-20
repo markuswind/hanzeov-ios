@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 enum SelectState {
     case Institute
@@ -16,6 +17,7 @@ enum SelectState {
 class SelectTableViewController: UITableViewController {
 
     var selectState: SelectState = .Institute
+    var instituteOptions = [[String: AnyObject]]()
 
     override func viewDidLoad() {
         themeTableView()
@@ -41,8 +43,20 @@ class SelectTableViewController: UITableViewController {
     }
 
     private func setupInstituteSelection() {
+        Client.sharedClient.performRequestWithMethod(.GET, path: "/group/", parameters: nil, completion: fillInstituteOptions)
+
         tableView.registerNib(UINib(nibName: "InstituteOptionCell", bundle: nil), forCellReuseIdentifier: "InstituteOptionCell")
         tableView.rowHeight = 65.0
+    }
+
+    private func fillInstituteOptions(result: JSON) {
+        print(result)
+
+        if let resultData = result[0].arrayObject {
+            instituteOptions = resultData as! [[String: AnyObject]]
+        }
+
+        reloadTableData()
     }
 
     private func setupClassSelection() {
@@ -63,7 +77,7 @@ class SelectTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch selectState {
         case .Institute:
-            return 10
+            return instituteOptions.count
         case .Class:
             return 30
         }
@@ -77,6 +91,9 @@ class SelectTableViewController: UITableViewController {
         switch selectState {
         case .Institute:
             cell = tableView.dequeueReusableCellWithIdentifier("InstituteOptionCell", forIndexPath: indexPath) as! InstituteOptionCell
+
+            var dict = instituteOptions[indexPath.row]
+            print(dict["name"]!.stringValue)
         case .Class:
             cell = tableView.dequeueReusableCellWithIdentifier("ClassOptionCell", forIndexPath: indexPath) as! ClassOptionCell
         }
