@@ -18,6 +18,7 @@ class SelectTableViewController: UITableViewController {
 
     var selectState: SelectState = .Institute
     var instituteOptions: JSON = []
+    var scheduleOptions: JSON = []
 
     override func viewDidLoad() {
         themeTableView()
@@ -75,7 +76,7 @@ class SelectTableViewController: UITableViewController {
         case .Institute:
             return instituteOptions.count
         case .Class:
-            return 30
+            return scheduleOptions.count
         }
     }
 
@@ -135,6 +136,7 @@ class SelectTableViewController: UITableViewController {
         return indexPath
     }
 
+    // FIXME:: this ain't working (yet)
     private func updateNavigationBar() {
         let backButton = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "backButtonPressed")
 
