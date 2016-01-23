@@ -52,7 +52,16 @@ class SelectTableViewController: UITableViewController {
         case .Institute:
             return instituteOptions.count
         case .Class:
-            return classOptions.count
+            var totalClassOptions = classOptions.count
+
+            for(var index = 1; index < classOptions.count; index++) {
+                let key: AnyObject = Array(classOptions.dictionaryValue.keys)[index]
+                let value = classOptions[key as! String]
+
+                totalClassOptions += value.count
+            }
+
+            return totalClassOptions
         }
     }
 
@@ -74,11 +83,8 @@ class SelectTableViewController: UITableViewController {
         case .Class:
             let classOptionCell = tableView.dequeueReusableCellWithIdentifier("ClassOptionCell", forIndexPath: indexPath) as! ClassOptionCell
 
-            let key: AnyObject = Array(self.classOptions.dictionaryValue.keys)[indexPath.row]
-            let value = self.classOptions[key as! String]
-
-            print(key)
-            print(value)
+            let key: AnyObject = Array(classOptions.dictionaryValue.keys)[indexPath.row]
+            let value = classOptions[key as! String]
 
             cell = classOptionCell
         }
