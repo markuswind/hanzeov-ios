@@ -23,6 +23,7 @@
 		285AED111C57B49E0001EFD8 /* exam-schedule-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 285AED0E1C57B49E0001EFD8 /* exam-schedule-placeholder.png */; };
 		285AED121C57B49E0001EFD8 /* placeholder-institute.png in Resources */ = {isa = PBXBuildFile; fileRef = 285AED0F1C57B49E0001EFD8 /* placeholder-institute.png */; };
 		285AED131C57B49E0001EFD8 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 285AED101C57B49E0001EFD8 /* placeholder.jpg */; };
+		285AED151C57B7EE0001EFD8 /* ClassSavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285AED141C57B7EE0001EFD8 /* ClassSavedViewController.swift */; };
 		288389611C4D6880009C1D01 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288389601C4D6880009C1D01 /* NavigationController.swift */; };
 		28CE44951C43224500E4CA04 /* JournyOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CE44941C43224500E4CA04 /* JournyOptionCell.xib */; };
 		28CE44991C43292B00E4CA04 /* ClassOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CE44981C43292B00E4CA04 /* ClassOptionCell.xib */; };
@@ -64,6 +65,7 @@
 		285AED0E1C57B49E0001EFD8 /* exam-schedule-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "exam-schedule-placeholder.png"; path = "images/exam-schedule-placeholder.png"; sourceTree = "<group>"; };
 		285AED0F1C57B49E0001EFD8 /* placeholder-institute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "placeholder-institute.png"; path = "images/placeholder-institute.png"; sourceTree = "<group>"; };
 		285AED101C57B49E0001EFD8 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = images/placeholder.jpg; sourceTree = "<group>"; };
+		285AED141C57B7EE0001EFD8 /* ClassSavedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassSavedViewController.swift; sourceTree = "<group>"; };
 		288389601C4D6880009C1D01 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		28CE44941C43224500E4CA04 /* JournyOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournyOptionCell.xib; sourceTree = "<group>"; };
 		28CE44961C43271400E4CA04 /* InstituteOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstituteOptionCell.xib; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				283BD0F41C483C5000BC6A3A /* JournyTableViewController.swift */,
 				288389601C4D6880009C1D01 /* NavigationController.swift */,
 				283E6AB21C4E90660099521F /* TabBarController.swift */,
+				285AED141C57B7EE0001EFD8 /* ClassSavedViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				283BD0F51C483C5000BC6A3A /* JournyTableViewController.swift in Sources */,
 				283BD0F11C48213400BC6A3A /* ScheduleTableViewController.swift in Sources */,
 				283BD0EF1C48206D00BC6A3A /* ScheduleViewController.swift in Sources */,
+				285AED151C57B7EE0001EFD8 /* ClassSavedViewController.swift in Sources */,
 				283E6AB31C4E90660099521F /* TabBarController.swift in Sources */,
 				288389611C4D6880009C1D01 /* NavigationController.swift in Sources */,
 				280214E41C42F4030089EB0B /* AppDelegate.swift in Sources */,

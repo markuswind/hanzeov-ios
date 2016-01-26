@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let tabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
 
 //        window!.rootViewController = tabBarController
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let savedClassId = defaults.valueForKey("classId")
+
+        print(savedClassId)
 
         return true
     }

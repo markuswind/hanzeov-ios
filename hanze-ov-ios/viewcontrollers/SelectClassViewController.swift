@@ -34,6 +34,10 @@ class SelectClassViewController: UIViewController, UITableViewDelegate, UITableV
         selectInfoLabel.backgroundColor = UIColor(red: 0.96, green: 0.75, blue: 0.4, alpha: 1.0)
         selectInfoLabel.textColor = UIColor(white: 0.99, alpha: 0.90)
 
+        setupTableViewSelection()
+    }
+
+    private func setupTableViewSelection() {
         switch selectState {
         case .Institute:
             setupInstituteSelection()
@@ -164,8 +168,14 @@ class SelectClassViewController: UIViewController, UITableViewDelegate, UITableV
 
             break
         case .Class:
-            let scheduleViewController = storyboard?.instantiateViewControllerWithIdentifier("ScheduleViewController")
-            navigationController?.pushViewController(scheduleViewController!, animated: true)
+            let classSavedViewController = storyboard?.instantiateViewControllerWithIdentifier("ClassSavedViewController") as! ClassSavedViewController
+            let selectedCell = tableView.cellForRowAtIndexPath(indexPath) as! ClassOptionCell
+
+            classSavedViewController.classId = selectedCell.classId!
+            classSavedViewController.classYear = selectedCell.yearLabel.text
+            classSavedViewController.className = selectedCell.nameLabel.text
+
+            navigationController?.pushViewController(classSavedViewController, animated: true)
 
             break
         }

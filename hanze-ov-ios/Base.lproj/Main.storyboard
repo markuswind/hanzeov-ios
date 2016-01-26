@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="678" y="455"/>
         </scene>
-        <!--View Controller-->
+        <!--Class Saved View Controller-->
         <scene sceneID="ZtE-Lg-49x">
             <objects>
-                <viewController id="fwb-Ug-N0u" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClassSavedViewController" id="fwb-Ug-N0u" customClass="ClassSavedViewController" customModule="hanze_ov_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BdI-Vc-V6d"/>
                         <viewControllerLayoutGuide type="bottom" id="4MM-pG-UAb"/>
@@ -118,33 +118,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exam-schedule-placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="7ZQ-Xp-PRA">
-                                <rect key="frame" x="200" y="93" width="200" height="200"/>
+                                <rect key="frame" x="225" y="93" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7ZQ-Xp-PRA" secondAttribute="height" multiplier="1:1" id="RIy-NM-J3c"/>
-                                    <constraint firstAttribute="height" constant="200" id="ggJ-m3-6y5"/>
+                                    <constraint firstAttribute="height" constant="150" id="U3m-d1-lCF"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4j-mq-hdM">
-                                <rect key="frame" x="267" y="442" width="67" height="35"/>
-                                <state key="normal" title="Ga verder"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ML4CZER (Jaar 4) is ingesteld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z77-Vt-4zy">
-                                <rect key="frame" x="180" y="323" width="242" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klik op &quot;Ga verder&quot; om de Hanze OV app te starten!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-to-TG9">
-                                <rect key="frame" x="165" y="352" width="271" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klik op &quot;Opslaan&quot; om verder te gaan!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-to-TG9">
+                                <rect key="frame" x="204" y="352" width="193" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ML4CZER (Jaar 4) is ingesteld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z77-Vt-4zy">
+                                <rect key="frame" x="179" y="323" width="242" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4j-mq-hdM">
+                                <rect key="frame" x="272" y="442" width="57" height="35"/>
+                                <state key="normal" title="Opslaan"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="fwb-Ug-N0u" eventType="touchUpInside" id="oU6-YI-YJD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Z77-Vt-4zy" firstAttribute="centerX" secondItem="nvG-Ae-Nbg" secondAttribute="centerX" id="ETm-Kw-jzp"/>
-                            <constraint firstItem="Z77-Vt-4zy" firstAttribute="top" secondItem="7ZQ-Xp-PRA" secondAttribute="bottom" constant="30" id="PwZ-Yd-dNn"/>
+                            <constraint firstItem="Z77-Vt-4zy" firstAttribute="top" secondItem="7ZQ-Xp-PRA" secondAttribute="bottom" constant="80" id="PwZ-Yd-dNn"/>
                             <constraint firstItem="7ZQ-Xp-PRA" firstAttribute="centerX" secondItem="nvG-Ae-Nbg" secondAttribute="centerX" id="TKZ-MC-a1S"/>
                             <constraint firstItem="hCT-to-TG9" firstAttribute="top" secondItem="Z77-Vt-4zy" secondAttribute="bottom" constant="8" id="V4H-9V-CDA"/>
                             <constraint firstItem="hCT-to-TG9" firstAttribute="centerX" secondItem="nvG-Ae-Nbg" secondAttribute="centerX" id="XOz-jZ-DbO"/>
@@ -154,6 +157,11 @@
                             <constraint firstItem="7ZQ-Xp-PRA" firstAttribute="top" secondItem="BdI-Vc-V6d" secondAttribute="bottom" constant="73" id="iY6-KK-DuS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="f4j-mq-hdM" id="wTb-z5-ATA"/>
+                        <outlet property="classLabel" destination="Z77-Vt-4zy" id="wuH-Ax-L0K"/>
+                        <outlet property="imageView" destination="7ZQ-Xp-PRA" id="ZzE-Xd-zHc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pvb-Sq-Kah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
