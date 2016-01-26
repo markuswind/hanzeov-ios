@@ -14,11 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let tabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
 
-        window!.rootViewController = tabBarController
-        
+//        window!.rootViewController = tabBarController
+
         return true
     }
 

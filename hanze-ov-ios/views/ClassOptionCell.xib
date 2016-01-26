@@ -3,30 +3,40 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClassOptionCell" rowHeight="55" id="YHG-Ty-O7b" customClass="ClassOptionCell" customModule="hanze_ov_ios" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ClassOptionCell" rowHeight="55" id="YHG-Ty-O7b" customClass="ClassOptionCell" customModule="hanze_ov_ios" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YHG-Ty-O7b" id="9af-Ty-ieF">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="287" height="54"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INV4A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QB-3u-x0h">
-                        <rect key="frame" x="8" y="30" width="49" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" text="INV4A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QB-3u-x0h">
+                        <rect key="frame" x="8" y="30" width="304" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jaar 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCZ-wl-b0R">
-                        <rect key="frame" x="8" y="8" width="45" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jaar 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCZ-wl-b0R">
+                        <rect key="frame" x="8" y="8" width="304" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="leadingMargin" secondItem="6QB-3u-x0h" secondAttribute="leading" id="FtU-oS-FCu"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="oCZ-wl-b0R" secondAttribute="leading" id="O09-JG-49Q"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6QB-3u-x0h" secondAttribute="trailing" id="RHA-l4-a44"/>
+                    <constraint firstItem="6QB-3u-x0h" firstAttribute="top" secondItem="oCZ-wl-b0R" secondAttribute="bottom" constant="7" id="Xjc-rU-Klc"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="6QB-3u-x0h" secondAttribute="bottom" id="aXd-Y8-cED"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="oCZ-wl-b0R" secondAttribute="trailing" id="oVc-ze-dhu"/>
+                    <constraint firstAttribute="topMargin" secondItem="oCZ-wl-b0R" secondAttribute="top" id="y7D-rl-VL2"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="nameLabel" destination="6QB-3u-x0h" id="RKy-Jp-Pqk"/>
