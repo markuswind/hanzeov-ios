@@ -21,7 +21,7 @@ class ClassSavedViewController: UIViewController {
     override func viewDidLoad() {
         view.backgroundColor = UIColor(red:0.96, green:0.8, blue:0.36, alpha:1)
 
-        classLabel.text = "\(className!) (\(classYear!)) is ingesteld"
+        classLabel.text = "\(className!) (\(classYear!))"
     }
 
     @IBAction func buttonPressed(sender: UIButton!) {

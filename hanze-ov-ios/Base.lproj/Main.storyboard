@@ -130,12 +130,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ML4CZER (Jaar 4) is ingesteld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z77-Vt-4zy">
-                                <rect key="frame" x="179" y="323" width="242" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4j-mq-hdM">
                                 <rect key="frame" x="272" y="442" width="57" height="35"/>
                                 <state key="normal" title="Opslaan"/>
@@ -143,17 +137,31 @@
                                     <action selector="buttonPressed:" destination="fwb-Ug-N0u" eventType="touchUpInside" id="oU6-YI-YJD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ML4CZER (Jaar 4)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z77-Vt-4zy">
+                                <rect key="frame" x="227" y="323" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uw keuze:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTJ-bo-Zer">
+                                <rect key="frame" x="258" y="294" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Z77-Vt-4zy" firstAttribute="centerX" secondItem="nvG-Ae-Nbg" secondAttribute="centerX" id="ETm-Kw-jzp"/>
-                            <constraint firstItem="Z77-Vt-4zy" firstAttribute="top" secondItem="7ZQ-Xp-PRA" secondAttribute="bottom" constant="80" id="PwZ-Yd-dNn"/>
+                            <constraint firstItem="oTJ-bo-Zer" firstAttribute="centerX" secondItem="nvG-Ae-Nbg" secondAttribute="centerX" id="LcH-T3-xJY"/>
                             <constraint firstItem="7ZQ-Xp-PRA" firstAttribute="centerX" secondItem="nvG-Ae-Nbg" secondAttribute="centerX" id="TKZ-MC-a1S"/>
                             <constraint firstItem="hCT-to-TG9" firstAttribute="top" secondItem="Z77-Vt-4zy" secondAttribute="bottom" constant="8" id="V4H-9V-CDA"/>
                             <constraint firstItem="hCT-to-TG9" firstAttribute="centerX" secondItem="nvG-Ae-Nbg" secondAttribute="centerX" id="XOz-jZ-DbO"/>
+                            <constraint firstItem="oTJ-bo-Zer" firstAttribute="top" secondItem="7ZQ-Xp-PRA" secondAttribute="bottom" constant="51" id="Ypn-GU-ugY"/>
                             <constraint firstItem="f4j-mq-hdM" firstAttribute="top" secondItem="hCT-to-TG9" secondAttribute="bottom" constant="76" id="ZlO-X3-cgU"/>
                             <constraint firstItem="f4j-mq-hdM" firstAttribute="centerX" secondItem="nvG-Ae-Nbg" secondAttribute="centerX" id="ek4-Ca-zUs"/>
                             <constraint firstItem="4MM-pG-UAb" firstAttribute="top" secondItem="f4j-mq-hdM" secondAttribute="bottom" constant="123" id="gDw-6P-zXO"/>
+                            <constraint firstItem="Z77-Vt-4zy" firstAttribute="top" secondItem="oTJ-bo-Zer" secondAttribute="bottom" constant="8" id="h8z-M6-bqj"/>
                             <constraint firstItem="7ZQ-Xp-PRA" firstAttribute="top" secondItem="BdI-Vc-V6d" secondAttribute="bottom" constant="73" id="iY6-KK-DuS"/>
                         </constraints>
                     </view>
