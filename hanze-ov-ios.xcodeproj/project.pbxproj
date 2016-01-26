@@ -26,7 +26,7 @@
 		288389611C4D6880009C1D01 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288389601C4D6880009C1D01 /* NavigationController.swift */; };
 		28CE44951C43224500E4CA04 /* JournyOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CE44941C43224500E4CA04 /* JournyOptionCell.xib */; };
 		28CE44991C43292B00E4CA04 /* ClassOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CE44981C43292B00E4CA04 /* ClassOptionCell.xib */; };
-		28CE44A41C433FB200E4CA04 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE44A31C433FB200E4CA04 /* SelectViewController.swift */; };
+		28CE44A41C433FB200E4CA04 /* SelectClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE44A31C433FB200E4CA04 /* SelectClassViewController.swift */; };
 		28CF52921C44563400E54F12 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CF52911C44563400E54F12 /* Client.swift */; };
 		28CF52941C4458AB00E54F12 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF52931C4458AB00E54F12 /* SwiftyJSON.framework */; };
 		28CF52951C4458AB00E54F12 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF52931C4458AB00E54F12 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -68,7 +68,7 @@
 		28CE44941C43224500E4CA04 /* JournyOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournyOptionCell.xib; sourceTree = "<group>"; };
 		28CE44961C43271400E4CA04 /* InstituteOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstituteOptionCell.xib; sourceTree = "<group>"; };
 		28CE44981C43292B00E4CA04 /* ClassOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassOptionCell.xib; sourceTree = "<group>"; };
-		28CE44A31C433FB200E4CA04 /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		28CE44A31C433FB200E4CA04 /* SelectClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectClassViewController.swift; sourceTree = "<group>"; };
 		28CF52911C44563400E54F12 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = "hanze-ov-ios/views/Client.swift"; sourceTree = SOURCE_ROOT; };
 		28CF52931C4458AB00E54F12 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,7 +132,7 @@
 		280214F61C42F5450089EB0B /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				28CE44A31C433FB200E4CA04 /* SelectViewController.swift */,
+				28CE44A31C433FB200E4CA04 /* SelectClassViewController.swift */,
 				283BD0EE1C48206D00BC6A3A /* ScheduleViewController.swift */,
 				283BD0F01C48213400BC6A3A /* ScheduleTableViewController.swift */,
 				283BD0F21C483A4100BC6A3A /* JournyViewController.swift */,
@@ -266,7 +266,7 @@
 				288389611C4D6880009C1D01 /* NavigationController.swift in Sources */,
 				280214E41C42F4030089EB0B /* AppDelegate.swift in Sources */,
 				28CF52921C44563400E54F12 /* Client.swift in Sources */,
-				28CE44A41C433FB200E4CA04 /* SelectViewController.swift in Sources */,
+				28CE44A41C433FB200E4CA04 /* SelectClassViewController.swift in Sources */,
 				283BD0F31C483A4100BC6A3A /* JournyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
