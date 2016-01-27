@@ -59,8 +59,8 @@
             <connections>
                 <outlet property="locationLabel" destination="Qe5-e5-wX3" id="6wh-bH-Mff"/>
                 <outlet property="nameLabel" destination="XZv-2i-5fR" id="FuB-Q5-EWK"/>
-                <outlet property="staffLabel" destination="HzV-zW-PdP" id="Dmn-Md-4dD"/>
-                <outlet property="timeLabel" destination="LpG-T6-YIp" id="Zxc-6f-H7a"/>
+                <outlet property="staffLabel" destination="HzV-zW-PdP" id="3hN-WK-QiG"/>
+                <outlet property="timeLabel" destination="LpG-T6-YIp" id="BVW-Yt-9a3"/>
             </connections>
             <point key="canvasLocation" x="601" y="407"/>
         </tableViewCell>

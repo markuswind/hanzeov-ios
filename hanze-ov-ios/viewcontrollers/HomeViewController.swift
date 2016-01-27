@@ -11,15 +11,10 @@ import SwiftyJSON
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var classLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var roomLabel: UILabel!
-
-    @IBOutlet weak var selectInfoLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
 
     var classId: String!
-    var scheduleOptions: JSON = []
+    var scheduleOptions: [[String : String]] = [[:]]
 
     override func viewDidLoad() {
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -27,7 +22,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         automaticallyAdjustsScrollViewInsets = false
 
-        navigationController?.navigationBar.topItem?.title = "Overzicht"
+        navigationController?.navigationBar.topItem?.title = "Rooster"
         
         styleViews()
         setupScheduleSelection()
@@ -38,40 +33,48 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.navigationBar.tintColor = view.backgroundColor
         navigationController?.navigationBar.translucent = false
 
-        selectInfoLabel.backgroundColor = UIColor(red: 0.96, green: 0.75, blue: 0.4, alpha: 1.0)
-        selectInfoLabel.textColor = UIColor(white: 0.99, alpha: 0.90)
-        selectInfoLabel.text = "Rooster"
-
         tableView.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1)
     }
     
     private func setupScheduleSelection() {
-        Client.sharedClient.performRequestWithMethod(.GET, path: "/timetable/" + classId, parameters: nil, completion: fillScheduleOptions)
+        scheduleOptions.removeAll()
 
         tableView.registerNib(UINib(nibName: "ScheduleOptionCell", bundle: nil), forCellReuseIdentifier: "ScheduleOptionCell")
         tableView.rowHeight = 90.0
+
+        Client.sharedClient.performRequestWithMethod(.GET, path: "/timetable/" + classId, parameters: nil, completion: fillScheduleOptions)
     }
 
-    private func fillScheduleOptions(var result: JSON) {
-        let key: AnyObject = Array(result.dictionaryValue.keys)[0]
-        var arrayValue = result.arrayValue
+    private func fillScheduleOptions(result: JSON) {
+        let id = Array(result.dictionaryValue.keys)[0]
+        let items = result[id]
 
-        result = result[key as! String]
+        for(var index = 0; index < items.count; index++) {
+            let item = items[index]
+            let endTime = getDateFromMilliseconds(item["end"].int!)
 
-        // filter options which already ended
-        for(var index = 0; index < result.count; index++) {
-            let value = result[index]
-            let now = NSDate()
-            let endTime = getDateFromMilliseconds(NSString(string: value["end"].stringValue).integerValue)
+            if(endTime.timeIntervalSince1970 > NSDate().timeIntervalSince1970) {
+                var scheduleOption: [String : String] = [:]
+                scheduleOption["id"] = item["id"].stringValue
+                scheduleOption["link"] = item["GET-route"].stringValue
+                scheduleOption["name"] = item["description"].stringValue
+                scheduleOption["location"] = item["location"].stringValue
+                scheduleOption["staff"] = item["staff"].stringValue
+                scheduleOption["start"] = item["start"].stringValue
+                scheduleOption["end"] = item["end"].stringValue
 
-            if(endTime.timeIntervalSince1970 > now.timeIntervalSince1970) {
-                print("nope")
+                scheduleOptions.append(scheduleOption)
             }
         }
 
-        scheduleOptions = result
-
         tableView.reloadData()
+    }
+
+    func getDateFromMilliseconds(ms: Int) -> NSDate {
+        let interval = NSTimeInterval(ms)
+        let date = NSDate(timeIntervalSince1970: interval)
+
+        return date
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,30 +83,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ScheduleOptionCell", forIndexPath: indexPath) as! ScheduleOptionCell
-        let value = scheduleOptions[indexPath.row]
+        let scheduleOption = scheduleOptions[indexPath.row]
 
-        print(value)
-
-        let intValue: Int = NSString(string: value["start"].stringValue).integerValue
-        let ti = NSTimeInterval(intValue)
-        let date = NSDate(timeIntervalSince1970: ti)
-
-        print(date)
-
-//        cell.timeLabel.text = ..
-        cell.nameLabel.text = value["description"].stringValue
-        cell.locationLabel.text = value["location"].stringValue
-        cell.staffLabel.text = value["staff"].stringValue
-        cell.link = value["GET-route"].stringValue
+        cell.nameLabel.text = scheduleOption["name"]
+        cell.timeLabel.text = "01:00 - 02:00"
+        cell.locationLabel.text = scheduleOption["location"]
+        cell.staffLabel.text = scheduleOption["staff"]
 
         return cell
-    }
-
-    func getDateFromMilliseconds(ms: Int) -> NSDate {
-        let ti = NSTimeInterval(ms)
-        let date = NSDate(timeIntervalSince1970: ti)
-
-        return date
     }
 
 }
@@ -114,8 +101,6 @@ class ScheduleOptionCell: UITableViewCell {
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var staffLabel: UILabel!
-
-    var link: String?
 
     override func awakeFromNib() {
         let selectedBackgroundColorView = UIView()
