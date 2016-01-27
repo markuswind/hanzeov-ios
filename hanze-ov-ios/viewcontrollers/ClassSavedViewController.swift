@@ -31,7 +31,7 @@ class ClassSavedViewController: UIViewController {
         print("NSUserDefaults: saved \(classId) forKey: classId")
 
         // Switch to home view
-        let homeViewController = storyboard?.instantiateViewControllerWithIdentifier("MainViewController")
+        let homeViewController = storyboard?.instantiateViewControllerWithIdentifier("HomeViewController")
         presentViewController(homeViewController!, animated: true, completion: nil)
     }
 

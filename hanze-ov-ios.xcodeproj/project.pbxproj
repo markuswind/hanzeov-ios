@@ -13,6 +13,7 @@
 		280214EE1C42F4030089EB0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280214EC1C42F4030089EB0B /* LaunchScreen.storyboard */; };
 		280214FA1C42F7810089EB0B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280214F91C42F7810089EB0B /* Alamofire.framework */; };
 		280214FB1C42F7810089EB0B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 280214F91C42F7810089EB0B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2815E8881C58E7E700E431FC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815E8871C58E7E700E431FC /* MenuViewController.swift */; };
 		2832209C1C43B8F0002D0B2C /* ScheduleOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2832209B1C43B8F0002D0B2C /* ScheduleOptionCell.xib */; };
 		2832209D1C444C7C002D0B2C /* InstituteOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CE44961C43271400E4CA04 /* InstituteOptionCell.xib */; };
 		283BD0EF1C48206D00BC6A3A /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283BD0EE1C48206D00BC6A3A /* ScheduleViewController.swift */; };
@@ -62,6 +63,7 @@
 		280214ED1C42F4030089EB0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280214EF1C42F4030089EB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		280214F91C42F7810089EB0B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		2815E8871C58E7E700E431FC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2832209B1C43B8F0002D0B2C /* ScheduleOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleOptionCell.xib; sourceTree = "<group>"; };
 		283BD0EE1C48206D00BC6A3A /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		283BD0F01C48213400BC6A3A /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				283E6AB21C4E90660099521F /* TabBarController.swift */,
 				285AED141C57B7EE0001EFD8 /* ClassSavedViewController.swift */,
 				285AED161C57DDA30001EFD8 /* HomeViewController.swift */,
+				2815E8871C58E7E700E431FC /* MenuViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				285AED151C57B7EE0001EFD8 /* ClassSavedViewController.swift in Sources */,
 				283E6AB31C4E90660099521F /* TabBarController.swift in Sources */,
 				288389611C4D6880009C1D01 /* NavigationController.swift in Sources */,
+				2815E8881C58E7E700E431FC /* MenuViewController.swift in Sources */,
 				280214E41C42F4030089EB0B /* AppDelegate.swift in Sources */,
 				285AED171C57DDA30001EFD8 /* HomeViewController.swift in Sources */,
 				28CF52921C44563400E54F12 /* Client.swift in Sources */,

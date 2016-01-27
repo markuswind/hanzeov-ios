@@ -24,7 +24,6 @@ class Client {
     func performRequestWithMethod(method: Alamofire.Method, path: String, parameters: [String: AnyObject]?, completion: (JSON) -> ()) {
         Alamofire.request(method, base_url + path, parameters: parameters).responseJSON { response in
             if let _ = response.response {
-                print(response.response)
                 completion(JSON(response.result.value!))
             }
         }

@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let TabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
-        let selectClassViewController = storyboard.instantiateViewControllerWithIdentifier("SelectClassViewController")
+        let selectClassViewController = storyboard.instantiateViewControllerWithIdentifier("WelcomeViewController")
 
         let defaults = NSUserDefaults.standardUserDefaults()
         let savedClassId = defaults.valueForKey("classId")

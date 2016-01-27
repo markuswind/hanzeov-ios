@@ -46,16 +46,30 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     private func setupScheduleSelection() {
-//        Client.sharedClient.performRequestWithMethod(.GET, path: "/timetable/" + classId, parameters: nil, completion: fillScheduleOptions)
+        Client.sharedClient.performRequestWithMethod(.GET, path: "/timetable/" + classId, parameters: nil, completion: fillScheduleOptions)
 
         tableView.registerNib(UINib(nibName: "ScheduleOptionCell", bundle: nil), forCellReuseIdentifier: "ScheduleOptionCell")
         tableView.rowHeight = 90.0
     }
 
-    private func fillScheduleOptions(result: JSON) {
-        print(result)
+    private func fillScheduleOptions(var result: JSON) {
+        let key: AnyObject = Array(result.dictionaryValue.keys)[0]
+        var arrayValue = result.arrayValue
 
-        // scheduleOptions = result
+        result = result[key as! String]
+
+        // filter options which already ended
+        for(var index = 0; index < result.count; index++) {
+            let value = result[index]
+            let now = NSDate()
+            let endTime = getDateFromMilliseconds(NSString(string: value["end"].stringValue).integerValue)
+
+            if(endTime.timeIntervalSince1970 > now.timeIntervalSince1970) {
+                print("nope")
+            }
+        }
+
+        scheduleOptions = result
 
         tableView.reloadData()
     }
@@ -66,21 +80,42 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ScheduleOptionCell", forIndexPath: indexPath) as! ScheduleOptionCell
+        let value = scheduleOptions[indexPath.row]
 
-        // cell.timeLabel.text = ..
-        // cell.locationlabel.text = ..
-        // cell.nameLabel.text = ..
+        print(value)
+
+        let intValue: Int = NSString(string: value["start"].stringValue).integerValue
+        let ti = NSTimeInterval(intValue)
+        let date = NSDate(timeIntervalSince1970: ti)
+
+        print(date)
+
+//        cell.timeLabel.text = ..
+        cell.nameLabel.text = value["description"].stringValue
+        cell.locationLabel.text = value["location"].stringValue
+        cell.staffLabel.text = value["staff"].stringValue
+        cell.link = value["GET-route"].stringValue
 
         return cell
+    }
+
+    func getDateFromMilliseconds(ms: Int) -> NSDate {
+        let ti = NSTimeInterval(ms)
+        let date = NSDate(timeIntervalSince1970: ti)
+
+        return date
     }
 
 }
 
 class ScheduleOptionCell: UITableViewCell {
 
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
-    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var staffLabel: UILabel!
+
+    var link: String?
 
     override func awakeFromNib() {
         let selectedBackgroundColorView = UIView()
