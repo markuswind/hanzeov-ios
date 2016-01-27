@@ -21,6 +21,23 @@
 		2815E8951C58E9C400E431FC /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8911C58E9C400E431FC /* home.png */; };
 		2815E8961C58E9C400E431FC /* information.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8921C58E9C400E431FC /* information.png */; };
 		2815E8971C58E9C400E431FC /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8931C58E9C400E431FC /* star.png */; };
+		2815E8AA1C592DE500E431FC /* airballoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8991C592DE500E431FC /* airballoon.png */; };
+		2815E8AB1C592DE500E431FC /* ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E89A1C592DE500E431FC /* ambulance.png */; };
+		2815E8AC1C592DE500E431FC /* android-studio.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E89B1C592DE500E431FC /* android-studio.png */; };
+		2815E8AD1C592DE500E431FC /* briefcase.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E89C1C592DE500E431FC /* briefcase.png */; };
+		2815E8AE1C592DE500E431FC /* comment-account.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E89D1C592DE500E431FC /* comment-account.png */; };
+		2815E8AF1C592DE500E431FC /* content-save.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E89E1C592DE500E431FC /* content-save.png */; };
+		2815E8B01C592DE500E431FC /* cube-send.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E89F1C592DE500E431FC /* cube-send.png */; };
+		2815E8B11C592DE500E431FC /* currency-usd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8A01C592DE500E431FC /* currency-usd.png */; };
+		2815E8B21C592DE500E431FC /* food-apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8A11C592DE500E431FC /* food-apple.png */; };
+		2815E8B31C592DE500E431FC /* football-helmet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8A21C592DE500E431FC /* football-helmet.png */; };
+		2815E8B41C592DE500E431FC /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8A31C592DE500E431FC /* instagram.png */; };
+		2815E8B51C592DE500E431FC /* music-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8A41C592DE500E431FC /* music-circle.png */; };
+		2815E8B61C592DE500E431FC /* nature-people.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8A51C592DE500E431FC /* nature-people.png */; };
+		2815E8B71C592DE500E431FC /* palette.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8A61C592DE500E431FC /* palette.png */; };
+		2815E8B81C592DE500E431FC /* school.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8A71C592DE500E431FC /* school.png */; };
+		2815E8B91C592DE500E431FC /* tie.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8A81C592DE500E431FC /* tie.png */; };
+		2815E8BA1C592DE500E431FC /* wrench.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815E8A91C592DE500E431FC /* wrench.png */; };
 		2832209C1C43B8F0002D0B2C /* ScheduleOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2832209B1C43B8F0002D0B2C /* ScheduleOptionCell.xib */; };
 		2832209D1C444C7C002D0B2C /* InstituteOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CE44961C43271400E4CA04 /* InstituteOptionCell.xib */; };
 		283BD0F31C483A4100BC6A3A /* JournyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283BD0F21C483A4100BC6A3A /* JournyViewController.swift */; };
@@ -69,6 +86,23 @@
 		2815E8911C58E9C400E431FC /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = images/icons/home.png; sourceTree = "<group>"; };
 		2815E8921C58E9C400E431FC /* information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = information.png; path = images/icons/information.png; sourceTree = "<group>"; };
 		2815E8931C58E9C400E431FC /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = images/icons/star.png; sourceTree = "<group>"; };
+		2815E8991C592DE500E431FC /* airballoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = airballoon.png; path = images/icons/institute/airballoon.png; sourceTree = "<group>"; };
+		2815E89A1C592DE500E431FC /* ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ambulance.png; path = images/icons/institute/ambulance.png; sourceTree = "<group>"; };
+		2815E89B1C592DE500E431FC /* android-studio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "android-studio.png"; path = "images/icons/institute/android-studio.png"; sourceTree = "<group>"; };
+		2815E89C1C592DE500E431FC /* briefcase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = briefcase.png; path = images/icons/institute/briefcase.png; sourceTree = "<group>"; };
+		2815E89D1C592DE500E431FC /* comment-account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "comment-account.png"; path = "images/icons/institute/comment-account.png"; sourceTree = "<group>"; };
+		2815E89E1C592DE500E431FC /* content-save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "content-save.png"; path = "images/icons/institute/content-save.png"; sourceTree = "<group>"; };
+		2815E89F1C592DE500E431FC /* cube-send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cube-send.png"; path = "images/icons/institute/cube-send.png"; sourceTree = "<group>"; };
+		2815E8A01C592DE500E431FC /* currency-usd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "currency-usd.png"; path = "images/icons/institute/currency-usd.png"; sourceTree = "<group>"; };
+		2815E8A11C592DE500E431FC /* food-apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "food-apple.png"; path = "images/icons/institute/food-apple.png"; sourceTree = "<group>"; };
+		2815E8A21C592DE500E431FC /* football-helmet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "football-helmet.png"; path = "images/icons/institute/football-helmet.png"; sourceTree = "<group>"; };
+		2815E8A31C592DE500E431FC /* instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = instagram.png; path = images/icons/institute/instagram.png; sourceTree = "<group>"; };
+		2815E8A41C592DE500E431FC /* music-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "music-circle.png"; path = "images/icons/institute/music-circle.png"; sourceTree = "<group>"; };
+		2815E8A51C592DE500E431FC /* nature-people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nature-people.png"; path = "images/icons/institute/nature-people.png"; sourceTree = "<group>"; };
+		2815E8A61C592DE500E431FC /* palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = palette.png; path = images/icons/institute/palette.png; sourceTree = "<group>"; };
+		2815E8A71C592DE500E431FC /* school.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = school.png; path = images/icons/institute/school.png; sourceTree = "<group>"; };
+		2815E8A81C592DE500E431FC /* tie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tie.png; path = images/icons/institute/tie.png; sourceTree = "<group>"; };
+		2815E8A91C592DE500E431FC /* wrench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wrench.png; path = images/icons/institute/wrench.png; sourceTree = "<group>"; };
 		2832209B1C43B8F0002D0B2C /* ScheduleOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleOptionCell.xib; sourceTree = "<group>"; };
 		283BD0F21C483A4100BC6A3A /* JournyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournyViewController.swift; sourceTree = "<group>"; };
 		283BD0F41C483C5000BC6A3A /* JournyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournyTableViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +224,23 @@
 		2815E8981C59292100E431FC /* institute */ = {
 			isa = PBXGroup;
 			children = (
+				2815E8991C592DE500E431FC /* airballoon.png */,
+				2815E89A1C592DE500E431FC /* ambulance.png */,
+				2815E89B1C592DE500E431FC /* android-studio.png */,
+				2815E89C1C592DE500E431FC /* briefcase.png */,
+				2815E89D1C592DE500E431FC /* comment-account.png */,
+				2815E89E1C592DE500E431FC /* content-save.png */,
+				2815E89F1C592DE500E431FC /* cube-send.png */,
+				2815E8A01C592DE500E431FC /* currency-usd.png */,
+				2815E8A11C592DE500E431FC /* food-apple.png */,
+				2815E8A21C592DE500E431FC /* football-helmet.png */,
+				2815E8A31C592DE500E431FC /* instagram.png */,
+				2815E8A41C592DE500E431FC /* music-circle.png */,
+				2815E8A51C592DE500E431FC /* nature-people.png */,
+				2815E8A61C592DE500E431FC /* palette.png */,
+				2815E8A71C592DE500E431FC /* school.png */,
+				2815E8A81C592DE500E431FC /* tie.png */,
+				2815E8A91C592DE500E431FC /* wrench.png */,
 			);
 			name = institute;
 			sourceTree = "<group>";
@@ -273,19 +324,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2815E8AA1C592DE500E431FC /* airballoon.png in Resources */,
 				280214EE1C42F4030089EB0B /* LaunchScreen.storyboard in Resources */,
+				2815E8AD1C592DE500E431FC /* briefcase.png in Resources */,
 				2815E8941C58E9C400E431FC /* account.png in Resources */,
 				280214EB1C42F4030089EB0B /* Assets.xcassets in Resources */,
+				2815E8B31C592DE500E431FC /* football-helmet.png in Resources */,
+				2815E8B91C592DE500E431FC /* tie.png in Resources */,
 				2832209D1C444C7C002D0B2C /* InstituteOptionCell.xib in Resources */,
+				2815E8B61C592DE500E431FC /* nature-people.png in Resources */,
+				2815E8B51C592DE500E431FC /* music-circle.png in Resources */,
 				285AED131C57B49E0001EFD8 /* placeholder.jpg in Resources */,
 				28CE44951C43224500E4CA04 /* JournyOptionCell.xib in Resources */,
+				2815E8B01C592DE500E431FC /* cube-send.png in Resources */,
+				2815E8B21C592DE500E431FC /* food-apple.png in Resources */,
 				280214E91C42F4030089EB0B /* Main.storyboard in Resources */,
+				2815E8AB1C592DE500E431FC /* ambulance.png in Resources */,
+				2815E8AF1C592DE500E431FC /* content-save.png in Resources */,
+				2815E8AE1C592DE500E431FC /* comment-account.png in Resources */,
+				2815E8AC1C592DE500E431FC /* android-studio.png in Resources */,
 				285AED121C57B49E0001EFD8 /* placeholder-institute.png in Resources */,
+				2815E8B11C592DE500E431FC /* currency-usd.png in Resources */,
+				2815E8B41C592DE500E431FC /* instagram.png in Resources */,
+				2815E8B71C592DE500E431FC /* palette.png in Resources */,
+				2815E8B81C592DE500E431FC /* school.png in Resources */,
 				2815E8951C58E9C400E431FC /* home.png in Resources */,
 				285AED111C57B49E0001EFD8 /* exam-schedule-placeholder.png in Resources */,
 				28CE44991C43292B00E4CA04 /* ClassOptionCell.xib in Resources */,
 				2815E8971C58E9C400E431FC /* star.png in Resources */,
 				2815E8961C58E9C400E431FC /* information.png in Resources */,
+				2815E8BA1C592DE500E431FC /* wrench.png in Resources */,
 				2832209C1C43B8F0002D0B2C /* ScheduleOptionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

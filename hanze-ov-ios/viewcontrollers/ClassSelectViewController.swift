@@ -14,7 +14,7 @@ enum SelectState {
     case Class
 }
 
-class SelectClassViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ClassSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var selectInfoLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -28,10 +28,10 @@ class SelectClassViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         navigationController?.navigationBar.topItem?.title = "Rooster"
 
-        view.backgroundColor = UIColor(red:0.96, green:0.8, blue:0.36, alpha:1)
+        view.backgroundColor = UIColor(colorCode: "FC9D3D")
         tableView.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1)
 
-        selectInfoLabel.backgroundColor = UIColor(red: 0.96, green: 0.75, blue: 0.4, alpha: 1.0)
+        selectInfoLabel.backgroundColor = UIColor.orangeColor() // UIColor(red: 0.96, green: 0.75, blue: 0.4, alpha: 1.0)
         selectInfoLabel.textColor = UIColor(white: 0.99, alpha: 0.90)
 
         setupTableViewSelection()
@@ -134,6 +134,7 @@ class SelectClassViewController: UIViewController, UITableViewDelegate, UITableV
             let key: AnyObject = Array(self.instituteOptions.dictionaryValue.keys)[indexPath.row]
             let value = self.instituteOptions[key as! String]
 
+            instituteOptionCell.setInstituteImage(value["code"].stringValue)
             instituteOptionCell.groupId = key as? String
             instituteOptionCell.nameLabel.text = value["code"].stringValue
             instituteOptionCell.descriptionLabel.text = value["name"].stringValue
@@ -158,7 +159,7 @@ class SelectClassViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         switch selectState {
         case .Institute:
-            let selectViewController = storyboard?.instantiateViewControllerWithIdentifier("SelectClassViewController") as! SelectClassViewController
+            let selectViewController = storyboard?.instantiateViewControllerWithIdentifier("SelectClassViewController") as! ClassSelectViewController
             let selectedCell = tableView.cellForRowAtIndexPath(indexPath) as! InstituteOptionCell
 
             selectViewController.selectState = .Class
@@ -208,6 +209,52 @@ class InstituteOptionCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+    }
+
+    func setInstituteImage(institute: String) {
+        var image = "school.png"
+
+        switch(institute) {
+        case "SAGZ":
+            image = "food-apple.png"
+        case "SASS":
+            image = "comment-account.png"
+        case "SITE":
+            image = "wrench.png"
+        case "SIBS":
+            image = "tie.png"
+        case "SIBK":
+            image = "briefcase.png"
+        case "SIFE":
+            image = "currency-usd.png"
+        case "SIMM":
+            image = "instagram.png"
+        case "SABC":
+            image = "android-studio.png"
+        case "SIEN":
+            image = "wrench.png"
+        case "SCMI":
+            image = "content-save.png"
+        case "SIFM":
+            image = "cube-send.png"
+        case "SPEA":
+            image = "nature-people.png"
+        case "SAVP":
+            image = "music-circle.png"
+        case "SISP":
+            image = "football-helmet.png"
+        case "SABK":
+            image = "palette.png"
+        case "SILS":
+            image = "airballoon.png"
+        case "SAVK":
+            image = "ambulance.png"
+        default:
+            break
+        }
+
+        iconImage.image = UIImage(named: image)?.imageWithRenderingMode(.AlwaysTemplate)
+        iconImage.tintColor = UIColor(colorCode: "888888")
     }
 
 }
