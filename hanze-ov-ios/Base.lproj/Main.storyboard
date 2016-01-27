@@ -174,7 +174,7 @@
         <!--Account-->
         <scene sceneID="FB8-d0-Gmk">
             <objects>
-                <navigationController id="PoN-l7-kk9" sceneMemberID="viewController">
+                <navigationController id="PoN-l7-kk9" customClass="NavigationController" customModule="hanze_ov_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="account.png" id="bBl-kI-SHb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wvv-0i-hcz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -210,7 +210,7 @@
         <!--Info & help-->
         <scene sceneID="KpH-QH-uBP">
             <objects>
-                <navigationController id="DDY-Gh-ea4" sceneMemberID="viewController">
+                <navigationController id="DDY-Gh-ea4" customClass="NavigationController" customModule="hanze_ov_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info &amp; help" image="information.png" id="Oct-s4-1Tw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QwU-D8-kLQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="1038" y="2011"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="rY1-x6-MGz">
             <objects>
-                <tableViewController id="X6e-Bg-XZW" sceneMemberID="viewController">
+                <tableViewController id="X6e-Bg-XZW" customClass="MenuViewController" customModule="hanze_ov_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kn7-GR-yrp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,7 +256,7 @@
         <!--Routes-->
         <scene sceneID="pih-4g-hTQ">
             <objects>
-                <navigationController id="3gO-HJ-2W9" sceneMemberID="viewController">
+                <navigationController id="3gO-HJ-2W9" customClass="NavigationController" customModule="hanze_ov_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Routes" image="star.png" id="TWM-8X-jSv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="izh-8B-xTc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

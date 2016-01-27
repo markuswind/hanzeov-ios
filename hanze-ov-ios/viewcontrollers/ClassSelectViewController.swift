@@ -159,7 +159,7 @@ class ClassSelectViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         switch selectState {
         case .Institute:
-            let selectViewController = storyboard?.instantiateViewControllerWithIdentifier("SelectClassViewController") as! ClassSelectViewController
+            let selectViewController = storyboard?.instantiateViewControllerWithIdentifier("ClassSelectViewController") as! ClassSelectViewController
             let selectedCell = tableView.cellForRowAtIndexPath(indexPath) as! InstituteOptionCell
 
             selectViewController.selectState = .Class

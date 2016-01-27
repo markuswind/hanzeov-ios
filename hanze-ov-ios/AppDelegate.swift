@@ -21,11 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let defaults = NSUserDefaults.standardUserDefaults()
         let savedClassId = defaults.valueForKey("classId")
 
-//        if savedClassId != nil {
-//            window!.rootViewController = TabBarController
-//        } else {
+        if savedClassId != nil {
+            window!.rootViewController = TabBarController
+        } else {
             window!.rootViewController = selectClassViewController
-//        }
+        }
 
         return true
     }

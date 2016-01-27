@@ -16,13 +16,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" text="12:30 - 14:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpG-T6-YIp">
-                        <rect key="frame" x="8" y="35" width="271" height="19"/>
+                        <rect key="frame" x="8" y="27" width="271" height="27"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="T4.2 WAD/tutoraat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZv-2i-5fR">
-                        <rect key="frame" x="8" y="16" width="242" height="21"/>
+                        <rect key="frame" x="8" y="8" width="242" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27/01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBH-0B-7nb">
-                        <rect key="frame" x="247" y="16" width="32" height="21"/>
+                        <rect key="frame" x="247" y="8" width="32" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -50,11 +50,11 @@
                     <constraint firstAttribute="trailingMargin" secondItem="Qe5-e5-wX3" secondAttribute="trailing" id="5fp-4u-qpq"/>
                     <constraint firstItem="wBH-0B-7nb" firstAttribute="leading" secondItem="XZv-2i-5fR" secondAttribute="trailing" constant="-3" id="6uc-Qk-kNV"/>
                     <constraint firstAttribute="trailingMargin" secondItem="LpG-T6-YIp" secondAttribute="trailing" id="B6e-5G-If6"/>
-                    <constraint firstItem="wBH-0B-7nb" firstAttribute="top" secondItem="72t-MD-pgx" secondAttribute="topMargin" constant="8" id="CQP-Kf-QVd"/>
+                    <constraint firstItem="wBH-0B-7nb" firstAttribute="top" secondItem="72t-MD-pgx" secondAttribute="topMargin" id="CQP-Kf-QVd"/>
                     <constraint firstAttribute="leadingMargin" secondItem="LpG-T6-YIp" secondAttribute="leading" id="ODA-VE-Efb"/>
                     <constraint firstAttribute="leadingMargin" secondItem="HzV-zW-PdP" secondAttribute="leading" id="P7d-M6-tan"/>
                     <constraint firstAttribute="leadingMargin" secondItem="XZv-2i-5fR" secondAttribute="leading" id="SWb-Tl-VjO"/>
-                    <constraint firstItem="XZv-2i-5fR" firstAttribute="top" secondItem="72t-MD-pgx" secondAttribute="topMargin" constant="8" id="ToT-MH-8fs"/>
+                    <constraint firstItem="XZv-2i-5fR" firstAttribute="top" secondItem="72t-MD-pgx" secondAttribute="topMargin" id="ToT-MH-8fs"/>
                     <constraint firstAttribute="bottomMargin" secondItem="HzV-zW-PdP" secondAttribute="bottom" id="Uia-Fe-fU1"/>
                     <constraint firstItem="LpG-T6-YIp" firstAttribute="top" secondItem="XZv-2i-5fR" secondAttribute="bottom" constant="-2" id="Xb5-Bf-UaR"/>
                     <constraint firstItem="Qe5-e5-wX3" firstAttribute="top" secondItem="LpG-T6-YIp" secondAttribute="bottom" constant="1" id="YwM-25-dM8"/>

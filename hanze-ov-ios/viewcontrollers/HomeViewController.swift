@@ -64,6 +64,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 scheduleOption["staff"] = item["staff"].stringValue
                 scheduleOption["time"] = getStringFromDate(startTime, format: "HH:MM") + " - "  + getStringFromDate(endTime, format: "HH:MM")
 
+                print(item["GET-route"])
+                print(item["start"])
                 scheduleOptions.append(scheduleOption)
             }
         }

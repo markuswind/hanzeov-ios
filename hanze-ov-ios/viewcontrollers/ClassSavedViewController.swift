@@ -19,7 +19,7 @@ class ClassSavedViewController: UIViewController {
     var className: String?
 
     override func viewDidLoad() {
-        view.backgroundColor = UIColor(red:0.96, green:0.8, blue:0.36, alpha:1)
+        view.backgroundColor = UIColor(colorCode: "FC9D3D")
 
         classLabel.text = "\(className!) (\(classYear!))"
     }
@@ -31,7 +31,7 @@ class ClassSavedViewController: UIViewController {
         print("NSUserDefaults: saved \(classId) forKey: classId")
 
         // Switch to home view
-        let homeViewController = storyboard?.instantiateViewControllerWithIdentifier("HomeViewController")
+        let homeViewController = storyboard?.instantiateViewControllerWithIdentifier("TabBarController")
         presentViewController(homeViewController!, animated: true, completion: nil)
     }
 
