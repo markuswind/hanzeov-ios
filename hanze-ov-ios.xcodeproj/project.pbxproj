@@ -14,10 +14,11 @@
 		280214FA1C42F7810089EB0B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280214F91C42F7810089EB0B /* Alamofire.framework */; };
 		280214FB1C42F7810089EB0B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 280214F91C42F7810089EB0B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2815E8881C58E7E700E431FC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815E8871C58E7E700E431FC /* MenuViewController.swift */; };
+		2815E88A1C58E8E300E431FC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815E8891C58E8E300E431FC /* Client.swift */; };
+		2815E88C1C58E8F000E431FC /* UIColor+HexCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815E88B1C58E8F000E431FC /* UIColor+HexCode.swift */; };
+		2815E88E1C58E8FF00E431FC /* ClassSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815E88D1C58E8FF00E431FC /* ClassSelectViewController.swift */; };
 		2832209C1C43B8F0002D0B2C /* ScheduleOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2832209B1C43B8F0002D0B2C /* ScheduleOptionCell.xib */; };
 		2832209D1C444C7C002D0B2C /* InstituteOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CE44961C43271400E4CA04 /* InstituteOptionCell.xib */; };
-		283BD0EF1C48206D00BC6A3A /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283BD0EE1C48206D00BC6A3A /* ScheduleViewController.swift */; };
-		283BD0F11C48213400BC6A3A /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283BD0F01C48213400BC6A3A /* ScheduleTableViewController.swift */; };
 		283BD0F31C483A4100BC6A3A /* JournyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283BD0F21C483A4100BC6A3A /* JournyViewController.swift */; };
 		283BD0F51C483C5000BC6A3A /* JournyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283BD0F41C483C5000BC6A3A /* JournyTableViewController.swift */; };
 		283E6AB31C4E90660099521F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283E6AB21C4E90660099521F /* TabBarController.swift */; };
@@ -30,12 +31,9 @@
 		285AED201C5808B90001EFD8 /* information.png in Resources */ = {isa = PBXBuildFile; fileRef = 285AED1E1C5808B90001EFD8 /* information.png */; };
 		285AED211C5808B90001EFD8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 285AED1F1C5808B90001EFD8 /* star.png */; };
 		285AED231C5808FF0001EFD8 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 285AED221C5808FF0001EFD8 /* account.png */; };
-		285AED251C5837350001EFD8 /* UIColor+HexCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285AED241C5837350001EFD8 /* UIColor+HexCode.swift */; };
 		288389611C4D6880009C1D01 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288389601C4D6880009C1D01 /* NavigationController.swift */; };
 		28CE44951C43224500E4CA04 /* JournyOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CE44941C43224500E4CA04 /* JournyOptionCell.xib */; };
 		28CE44991C43292B00E4CA04 /* ClassOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CE44981C43292B00E4CA04 /* ClassOptionCell.xib */; };
-		28CE44A41C433FB200E4CA04 /* SelectClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE44A31C433FB200E4CA04 /* SelectClassViewController.swift */; };
-		28CF52921C44563400E54F12 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CF52911C44563400E54F12 /* Client.swift */; };
 		28CF52941C4458AB00E54F12 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF52931C4458AB00E54F12 /* SwiftyJSON.framework */; };
 		28CF52951C4458AB00E54F12 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF52931C4458AB00E54F12 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -64,9 +62,10 @@
 		280214EF1C42F4030089EB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		280214F91C42F7810089EB0B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		2815E8871C58E7E700E431FC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2815E8891C58E8E300E431FC /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		2815E88B1C58E8F000E431FC /* UIColor+HexCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+HexCode.swift"; path = "categories/UIColor+HexCode.swift"; sourceTree = "<group>"; };
+		2815E88D1C58E8FF00E431FC /* ClassSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassSelectViewController.swift; sourceTree = "<group>"; };
 		2832209B1C43B8F0002D0B2C /* ScheduleOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleOptionCell.xib; sourceTree = "<group>"; };
-		283BD0EE1C48206D00BC6A3A /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
-		283BD0F01C48213400BC6A3A /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		283BD0F21C483A4100BC6A3A /* JournyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournyViewController.swift; sourceTree = "<group>"; };
 		283BD0F41C483C5000BC6A3A /* JournyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournyTableViewController.swift; sourceTree = "<group>"; };
 		283E6AB21C4E90660099521F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -79,13 +78,10 @@
 		285AED1E1C5808B90001EFD8 /* information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = information.png; path = images/information.png; sourceTree = "<group>"; };
 		285AED1F1C5808B90001EFD8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = images/star.png; sourceTree = "<group>"; };
 		285AED221C5808FF0001EFD8 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = account.png; path = images/account.png; sourceTree = "<group>"; };
-		285AED241C5837350001EFD8 /* UIColor+HexCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexCode.swift"; sourceTree = "<group>"; };
 		288389601C4D6880009C1D01 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		28CE44941C43224500E4CA04 /* JournyOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournyOptionCell.xib; sourceTree = "<group>"; };
 		28CE44961C43271400E4CA04 /* InstituteOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstituteOptionCell.xib; sourceTree = "<group>"; };
 		28CE44981C43292B00E4CA04 /* ClassOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassOptionCell.xib; sourceTree = "<group>"; };
-		28CE44A31C433FB200E4CA04 /* SelectClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectClassViewController.swift; sourceTree = "<group>"; };
-		28CF52911C44563400E54F12 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = "hanze-ov-ios/views/Client.swift"; sourceTree = SOURCE_ROOT; };
 		28CF52931C4458AB00E54F12 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,9 +144,7 @@
 		280214F61C42F5450089EB0B /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				28CE44A31C433FB200E4CA04 /* SelectClassViewController.swift */,
-				283BD0EE1C48206D00BC6A3A /* ScheduleViewController.swift */,
-				283BD0F01C48213400BC6A3A /* ScheduleTableViewController.swift */,
+				2815E88D1C58E8FF00E431FC /* ClassSelectViewController.swift */,
 				283BD0F21C483A4100BC6A3A /* JournyViewController.swift */,
 				283BD0F41C483C5000BC6A3A /* JournyTableViewController.swift */,
 				288389601C4D6880009C1D01 /* NavigationController.swift */,
@@ -165,7 +159,7 @@
 		280214F71C42F54F0089EB0B /* helpers */ = {
 			isa = PBXGroup;
 			children = (
-				28CF52911C44563400E54F12 /* Client.swift */,
+				2815E8891C58E8E300E431FC /* Client.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -198,7 +192,7 @@
 		28CE44A51C43406200E4CA04 /* categories */ = {
 			isa = PBXGroup;
 			children = (
-				285AED241C5837350001EFD8 /* UIColor+HexCode.swift */,
+				2815E88B1C58E8F000E431FC /* UIColor+HexCode.swift */,
 			);
 			name = categories;
 			sourceTree = "<group>";
@@ -287,18 +281,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				285AED251C5837350001EFD8 /* UIColor+HexCode.swift in Sources */,
+				2815E88E1C58E8FF00E431FC /* ClassSelectViewController.swift in Sources */,
 				283BD0F51C483C5000BC6A3A /* JournyTableViewController.swift in Sources */,
-				283BD0F11C48213400BC6A3A /* ScheduleTableViewController.swift in Sources */,
-				283BD0EF1C48206D00BC6A3A /* ScheduleViewController.swift in Sources */,
 				285AED151C57B7EE0001EFD8 /* ClassSavedViewController.swift in Sources */,
 				283E6AB31C4E90660099521F /* TabBarController.swift in Sources */,
+				2815E88A1C58E8E300E431FC /* Client.swift in Sources */,
 				288389611C4D6880009C1D01 /* NavigationController.swift in Sources */,
 				2815E8881C58E7E700E431FC /* MenuViewController.swift in Sources */,
 				280214E41C42F4030089EB0B /* AppDelegate.swift in Sources */,
+				2815E88C1C58E8F000E431FC /* UIColor+HexCode.swift in Sources */,
 				285AED171C57DDA30001EFD8 /* HomeViewController.swift in Sources */,
-				28CF52921C44563400E54F12 /* Client.swift in Sources */,
-				28CE44A41C433FB200E4CA04 /* SelectClassViewController.swift in Sources */,
 				283BD0F31C483A4100BC6A3A /* JournyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

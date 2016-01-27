@@ -14,7 +14,7 @@ enum SelectState {
     case Class
 }
 
-class SelectClassViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ClassSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var selectInfoLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -158,7 +158,7 @@ class SelectClassViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         switch selectState {
         case .Institute:
-            let selectViewController = storyboard?.instantiateViewControllerWithIdentifier("SelectClassViewController") as! SelectClassViewController
+            let selectViewController = storyboard?.instantiateViewControllerWithIdentifier("ClassSelectViewController") as! ClassSelectViewController
             let selectedCell = tableView.cellForRowAtIndexPath(indexPath) as! InstituteOptionCell
 
             selectViewController.selectState = .Class

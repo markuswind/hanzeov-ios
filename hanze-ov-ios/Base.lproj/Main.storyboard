@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-884" y="461"/>
         </scene>
-        <!--Select Class View Controller-->
+        <!--Class Select View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SelectClassViewController" id="BYZ-38-t0r" customClass="SelectClassViewController" customModule="hanze_ov_ios" customModuleProvider="target" colorLabel="IBBuiltInLabel-Orange" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClassSelectViewController" id="BYZ-38-t0r" customClass="ClassSelectViewController" customModule="hanze_ov_ios" customModuleProvider="target" colorLabel="IBBuiltInLabel-Orange" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
