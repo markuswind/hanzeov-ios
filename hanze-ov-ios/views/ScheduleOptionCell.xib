@@ -8,42 +8,44 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduleOptionCell" rowHeight="70" id="ak4-1f-phH" customClass="ScheduleOptionCell" customModule="hanze_ov_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ScheduleOptionCell" rowHeight="92" id="ak4-1f-phH" customClass="ScheduleOptionCell" customModule="hanze_ov_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ak4-1f-phH" id="72t-MD-pgx">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="287" height="91"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:30 - 14:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpG-T6-YIp">
-                        <rect key="frame" x="8" y="8" width="103" height="21"/>
+                        <rect key="frame" x="8" y="39" width="271" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="T4.2 WAD/tutoraat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZv-2i-5fR">
-                        <rect key="frame" x="119" y="8" width="193" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="8" y="15" width="271" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EM/E146 C20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe5-e5-wX3">
-                        <rect key="frame" x="8" y="37" width="105" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="EM/E146 C20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe5-e5-wX3">
+                        <rect key="frame" x="8" y="65" width="271" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="leadingMargin" secondItem="LpG-T6-YIp" secondAttribute="leading" id="8fi-Ua-sV0"/>
-                    <constraint firstAttribute="topMargin" secondItem="XZv-2i-5fR" secondAttribute="top" id="Am4-pw-e32"/>
-                    <constraint firstItem="Qe5-e5-wX3" firstAttribute="top" secondItem="LpG-T6-YIp" secondAttribute="bottom" constant="8" id="FeP-rY-7ro"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Qe5-e5-wX3" secondAttribute="bottom" constant="3" id="ZrW-sQ-zOx"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="XZv-2i-5fR" secondAttribute="trailing" id="e98-Ba-iff"/>
-                    <constraint firstItem="XZv-2i-5fR" firstAttribute="leading" secondItem="LpG-T6-YIp" secondAttribute="trailing" constant="8" id="l2g-d7-2T1"/>
-                    <constraint firstItem="XZv-2i-5fR" firstAttribute="bottom" secondItem="LpG-T6-YIp" secondAttribute="bottom" id="pP4-zc-WhF"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="Qe5-e5-wX3" secondAttribute="leading" id="u7J-kb-WnE"/>
-                    <constraint firstAttribute="topMargin" secondItem="LpG-T6-YIp" secondAttribute="top" id="xRz-oi-AVZ"/>
+                    <constraint firstItem="XZv-2i-5fR" firstAttribute="top" secondItem="72t-MD-pgx" secondAttribute="topMargin" constant="7" id="Ivj-LA-d6w"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Qe5-e5-wX3" secondAttribute="leading" id="JyL-7I-Wsb"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="XZv-2i-5fR" secondAttribute="leading" id="Pxt-wT-Kbk"/>
+                    <constraint firstItem="LpG-T6-YIp" firstAttribute="top" secondItem="XZv-2i-5fR" secondAttribute="bottom" constant="3" id="VBa-tr-hho"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Qe5-e5-wX3" secondAttribute="bottom" id="XZn-8g-JrF"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Qe5-e5-wX3" secondAttribute="trailing" id="Xj0-tb-8hE"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="LpG-T6-YIp" secondAttribute="leading" id="iDl-cK-4ge"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="LpG-T6-YIp" secondAttribute="trailing" id="j7C-94-Te0"/>
+                    <constraint firstItem="Qe5-e5-wX3" firstAttribute="top" secondItem="LpG-T6-YIp" secondAttribute="bottom" constant="5" id="lVQ-ad-eDV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="XZv-2i-5fR" secondAttribute="trailing" id="ozu-NH-OYs"/>
+                    <constraint firstItem="Qe5-e5-wX3" firstAttribute="top" secondItem="LpG-T6-YIp" secondAttribute="bottom" constant="5" id="y6c-Ub-klQ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -51,7 +53,7 @@
                 <outlet property="nameLabel" destination="XZv-2i-5fR" id="FuB-Q5-EWK"/>
                 <outlet property="timeLabel" destination="LpG-T6-YIp" id="Zxc-6f-H7a"/>
             </connections>
-            <point key="canvasLocation" x="601" y="396"/>
+            <point key="canvasLocation" x="601" y="407"/>
         </tableViewCell>
     </objects>
 </document>

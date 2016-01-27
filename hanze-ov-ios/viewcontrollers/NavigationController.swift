@@ -17,11 +17,9 @@ class NavigationController: UINavigationController {
     }
 
     private func styleNavigationBar() {
-        navigationBar.barTintColor = UIColor(red:0.97, green:0.77, blue:0.36, alpha:1)
-
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSForegroundColorAttributeName : UIColor.redColor(),
-        ]
+        navigationBar.barTintColor = UIColor(colorCode: "FC9D3D")
+        navigationBar.barStyle = .Black
+        navigationBar.translucent = false
     }
 
 }

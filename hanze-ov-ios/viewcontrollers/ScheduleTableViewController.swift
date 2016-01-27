@@ -124,28 +124,28 @@ class ScheduleTableViewController: UITableViewController {
 
 }
 
-class ScheduleOptionCell: UITableViewCell {
-
-    @IBOutlet var timeLabel: UILabel!
-    @IBOutlet var locationLabel: UILabel!
-    @IBOutlet var nameLabel: UILabel!
-
-    override func awakeFromNib() {
-        let selectedBackgroundColorView = UIView()
-        selectedBackgroundColorView.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 0.8)
-
-        selectedBackgroundView = selectedBackgroundColorView
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-
-}
+//class ScheduleOptionCell: UITableViewCell {
+//
+//    @IBOutlet var timeLabel: UILabel!
+//    @IBOutlet var locationLabel: UILabel!
+//    @IBOutlet var nameLabel: UILabel!
+//
+//    override func awakeFromNib() {
+//        let selectedBackgroundColorView = UIView()
+//        selectedBackgroundColorView.backgroundColor = UIColor(red: 0.96, green: 0.82, blue: 0.4, alpha: 0.8)
+//
+//        selectedBackgroundView = selectedBackgroundColorView
+//    }
+//
+//    override func setSelected(selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//    }
+//
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//    }
+//
+//}
 
 class JournyOptionCell: UITableViewCell {
 

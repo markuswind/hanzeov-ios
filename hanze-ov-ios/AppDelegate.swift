@@ -14,14 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let tabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let TabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
+        let selectClassViewController = storyboard.instantiateViewControllerWithIdentifier("SelectClassViewController")
 
-//        window!.rootViewController = tabBarController
         let defaults = NSUserDefaults.standardUserDefaults()
         let savedClassId = defaults.valueForKey("classId")
 
-        print(savedClassId)
+        if savedClassId != nil {
+            window!.rootViewController = TabBarController
+        } else {
+            window!.rootViewController = selectClassViewController
+        }
 
         return true
     }

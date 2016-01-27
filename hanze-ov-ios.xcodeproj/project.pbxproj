@@ -24,6 +24,12 @@
 		285AED121C57B49E0001EFD8 /* placeholder-institute.png in Resources */ = {isa = PBXBuildFile; fileRef = 285AED0F1C57B49E0001EFD8 /* placeholder-institute.png */; };
 		285AED131C57B49E0001EFD8 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 285AED101C57B49E0001EFD8 /* placeholder.jpg */; };
 		285AED151C57B7EE0001EFD8 /* ClassSavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285AED141C57B7EE0001EFD8 /* ClassSavedViewController.swift */; };
+		285AED171C57DDA30001EFD8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285AED161C57DDA30001EFD8 /* HomeViewController.swift */; };
+		285AED1C1C5807430001EFD8 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 285AED191C5807430001EFD8 /* home.png */; };
+		285AED201C5808B90001EFD8 /* information.png in Resources */ = {isa = PBXBuildFile; fileRef = 285AED1E1C5808B90001EFD8 /* information.png */; };
+		285AED211C5808B90001EFD8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 285AED1F1C5808B90001EFD8 /* star.png */; };
+		285AED231C5808FF0001EFD8 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 285AED221C5808FF0001EFD8 /* account.png */; };
+		285AED251C5837350001EFD8 /* UIColor+HexCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285AED241C5837350001EFD8 /* UIColor+HexCode.swift */; };
 		288389611C4D6880009C1D01 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288389601C4D6880009C1D01 /* NavigationController.swift */; };
 		28CE44951C43224500E4CA04 /* JournyOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CE44941C43224500E4CA04 /* JournyOptionCell.xib */; };
 		28CE44991C43292B00E4CA04 /* ClassOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CE44981C43292B00E4CA04 /* ClassOptionCell.xib */; };
@@ -66,6 +72,12 @@
 		285AED0F1C57B49E0001EFD8 /* placeholder-institute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "placeholder-institute.png"; path = "images/placeholder-institute.png"; sourceTree = "<group>"; };
 		285AED101C57B49E0001EFD8 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = images/placeholder.jpg; sourceTree = "<group>"; };
 		285AED141C57B7EE0001EFD8 /* ClassSavedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassSavedViewController.swift; sourceTree = "<group>"; };
+		285AED161C57DDA30001EFD8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		285AED191C5807430001EFD8 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = images/home.png; sourceTree = "<group>"; };
+		285AED1E1C5808B90001EFD8 /* information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = information.png; path = images/information.png; sourceTree = "<group>"; };
+		285AED1F1C5808B90001EFD8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = images/star.png; sourceTree = "<group>"; };
+		285AED221C5808FF0001EFD8 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = account.png; path = images/account.png; sourceTree = "<group>"; };
+		285AED241C5837350001EFD8 /* UIColor+HexCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexCode.swift"; sourceTree = "<group>"; };
 		288389601C4D6880009C1D01 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		28CE44941C43224500E4CA04 /* JournyOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournyOptionCell.xib; sourceTree = "<group>"; };
 		28CE44961C43271400E4CA04 /* InstituteOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstituteOptionCell.xib; sourceTree = "<group>"; };
@@ -142,6 +154,7 @@
 				288389601C4D6880009C1D01 /* NavigationController.swift */,
 				283E6AB21C4E90660099521F /* TabBarController.swift */,
 				285AED141C57B7EE0001EFD8 /* ClassSavedViewController.swift */,
+				285AED161C57DDA30001EFD8 /* HomeViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -168,6 +181,10 @@
 		28CE449C1C43307D00E4CA04 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				285AED221C5808FF0001EFD8 /* account.png */,
+				285AED1E1C5808B90001EFD8 /* information.png */,
+				285AED1F1C5808B90001EFD8 /* star.png */,
+				285AED191C5807430001EFD8 /* home.png */,
 				285AED0E1C57B49E0001EFD8 /* exam-schedule-placeholder.png */,
 				285AED0F1C57B49E0001EFD8 /* placeholder-institute.png */,
 				285AED101C57B49E0001EFD8 /* placeholder.jpg */,
@@ -178,6 +195,7 @@
 		28CE44A51C43406200E4CA04 /* categories */ = {
 			isa = PBXGroup;
 			children = (
+				285AED241C5837350001EFD8 /* UIColor+HexCode.swift */,
 			);
 			name = categories;
 			sourceTree = "<group>";
@@ -242,13 +260,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				285AED201C5808B90001EFD8 /* information.png in Resources */,
 				280214EE1C42F4030089EB0B /* LaunchScreen.storyboard in Resources */,
 				280214EB1C42F4030089EB0B /* Assets.xcassets in Resources */,
+				285AED231C5808FF0001EFD8 /* account.png in Resources */,
 				2832209D1C444C7C002D0B2C /* InstituteOptionCell.xib in Resources */,
 				285AED131C57B49E0001EFD8 /* placeholder.jpg in Resources */,
 				28CE44951C43224500E4CA04 /* JournyOptionCell.xib in Resources */,
 				280214E91C42F4030089EB0B /* Main.storyboard in Resources */,
 				285AED121C57B49E0001EFD8 /* placeholder-institute.png in Resources */,
+				285AED1C1C5807430001EFD8 /* home.png in Resources */,
+				285AED211C5808B90001EFD8 /* star.png in Resources */,
 				285AED111C57B49E0001EFD8 /* exam-schedule-placeholder.png in Resources */,
 				28CE44991C43292B00E4CA04 /* ClassOptionCell.xib in Resources */,
 				2832209C1C43B8F0002D0B2C /* ScheduleOptionCell.xib in Resources */,
@@ -262,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				285AED251C5837350001EFD8 /* UIColor+HexCode.swift in Sources */,
 				283BD0F51C483C5000BC6A3A /* JournyTableViewController.swift in Sources */,
 				283BD0F11C48213400BC6A3A /* ScheduleTableViewController.swift in Sources */,
 				283BD0EF1C48206D00BC6A3A /* ScheduleViewController.swift in Sources */,
@@ -269,6 +292,7 @@
 				283E6AB31C4E90660099521F /* TabBarController.swift in Sources */,
 				288389611C4D6880009C1D01 /* NavigationController.swift in Sources */,
 				280214E41C42F4030089EB0B /* AppDelegate.swift in Sources */,
+				285AED171C57DDA30001EFD8 /* HomeViewController.swift in Sources */,
 				28CF52921C44563400E54F12 /* Client.swift in Sources */,
 				28CE44A41C433FB200E4CA04 /* SelectClassViewController.swift in Sources */,
 				283BD0F31C483A4100BC6A3A /* JournyViewController.swift in Sources */,

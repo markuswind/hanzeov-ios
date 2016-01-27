@@ -25,12 +25,14 @@ class ClassSavedViewController: UIViewController {
     }
 
     @IBAction func buttonPressed(sender: UIButton!) {
-        print(classId)
-        print(classYear)
-        print(className)
-
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setValue(classId, forKey: "classId")
+
+        print("NSUserDefaults: saved \(classId) forKey: classId")
+
+        // Switch to home view
+        let homeViewController = storyboard?.instantiateViewControllerWithIdentifier("MainViewController")
+        presentViewController(homeViewController!, animated: true, completion: nil)
     }
 
 }
