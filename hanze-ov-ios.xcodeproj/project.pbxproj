@@ -178,12 +178,20 @@
 		2815E88F1C58E9B600E431FC /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				2815E8981C59292100E431FC /* institute */,
 				2815E8901C58E9C400E431FC /* account.png */,
 				2815E8911C58E9C400E431FC /* home.png */,
 				2815E8921C58E9C400E431FC /* information.png */,
 				2815E8931C58E9C400E431FC /* star.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		2815E8981C59292100E431FC /* institute */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = institute;
 			sourceTree = "<group>";
 		};
 		28CE449C1C43307D00E4CA04 /* images */ = {

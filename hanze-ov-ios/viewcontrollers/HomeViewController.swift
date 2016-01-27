@@ -51,17 +51,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         for(var index = 0; index < items.count; index++) {
             let item = items[index]
+            let startTime = getDateFromMilliseconds(item["start"].int!)
             let endTime = getDateFromMilliseconds(item["end"].int!)
 
             if(endTime.timeIntervalSince1970 > NSDate().timeIntervalSince1970) {
                 var scheduleOption: [String : String] = [:]
                 scheduleOption["id"] = item["id"].stringValue
                 scheduleOption["link"] = item["GET-route"].stringValue
+                scheduleOption["date"] = getStringFromDate(startTime, format: "DD/MM")
                 scheduleOption["name"] = item["description"].stringValue
                 scheduleOption["location"] = item["location"].stringValue
                 scheduleOption["staff"] = item["staff"].stringValue
-                scheduleOption["start"] = item["start"].stringValue
-                scheduleOption["end"] = item["end"].stringValue
+                scheduleOption["time"] = getStringFromDate(startTime, format: "HH:MM") + " - "  + getStringFromDate(endTime, format: "HH:MM")
 
                 scheduleOptions.append(scheduleOption)
             }
@@ -77,6 +78,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return date
     }
 
+    func getStringFromDate(date: NSDate, format: String) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = format
+
+        return dateFormatter.stringFromDate(NSDate())
+    }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return scheduleOptions.count
     }
@@ -86,7 +94,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let scheduleOption = scheduleOptions[indexPath.row]
 
         cell.nameLabel.text = scheduleOption["name"]
-        cell.timeLabel.text = "01:00 - 02:00"
+        cell.dateLabel.text = scheduleOption["date"]
+        cell.timeLabel.text = scheduleOption["time"]
         cell.locationLabel.text = scheduleOption["location"]
         cell.staffLabel.text = scheduleOption["staff"]
 
@@ -98,6 +107,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 class ScheduleOptionCell: UITableViewCell {
 
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var staffLabel: UILabel!
