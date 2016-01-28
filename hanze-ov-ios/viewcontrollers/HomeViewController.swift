@@ -55,17 +55,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let endTime = getDateFromMilliseconds(item["end"].int!)
 
             if(endTime.timeIntervalSince1970 > NSDate().timeIntervalSince1970) {
-                var scheduleOption: [String : String] = [:]
-                scheduleOption["id"] = item["id"].stringValue
-                scheduleOption["link"] = item["GET-route"].stringValue
-                scheduleOption["date"] = getStringFromDate(startTime, format: "DD/MM")
-                scheduleOption["name"] = item["description"].stringValue
-                scheduleOption["location"] = item["location"].stringValue
-                scheduleOption["staff"] = item["staff"].stringValue
-                scheduleOption["time"] = getStringFromDate(startTime, format: "HH:MM") + " - "  + getStringFromDate(endTime, format: "HH:MM")
+                let scheduleOption = createScheduleOption(item, startTime: startTime, endTime: endTime)
 
-                print(item["GET-route"])
-                print(item["start"])
                 scheduleOptions.append(scheduleOption)
             }
         }
@@ -78,6 +69,32 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let date = NSDate(timeIntervalSince1970: interval)
 
         return date
+    }
+
+    func createScheduleOption(item: JSON, startTime: NSDate, endTime: NSDate) -> [String : String] {
+        // get all calendar data
+        let calendar = NSCalendar.currentCalendar()
+
+        let startDay = calendar.components(NSCalendarUnit.Day, fromDate: startTime)
+        let startMonth = calendar.component(NSCalendarUnit.Month, fromDate: startTime)
+
+        let startHour = calendar.component(NSCalendarUnit.Hour, fromDate: startTime)
+        let startMinute = calendar.component(NSCalendarUnit.Minute, fromDate: startTime)
+
+        let endHour = calendar.component(NSCalendarUnit.Hour, fromDate: endTime)
+        let endMinute = calendar.component(NSCalendarUnit.Minute, fromDate: endTime)
+
+        // create schedule option
+        var scheduleOption: [String : String] = [:]
+        scheduleOption["id"] = item["id"].stringValue
+        scheduleOption["link"] = item["GET-route"].stringValue
+        scheduleOption["date"] = "\(startDay.day)/\(startMonth)"
+        scheduleOption["name"] = item["description"].stringValue
+        scheduleOption["location"] = item["location"].stringValue
+        scheduleOption["staff"] = item["staff"].stringValue
+        scheduleOption["time"] = "\(startHour):\(startMinute) - \(endHour):\(endMinute)"
+
+        return scheduleOption
     }
 
     func getStringFromDate(date: NSDate, format: String) -> String {
@@ -95,6 +112,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCellWithIdentifier("ScheduleOptionCell", forIndexPath: indexPath) as! ScheduleOptionCell
         let scheduleOption = scheduleOptions[indexPath.row]
 
+        cell.link = scheduleOption["link"]
+
         cell.nameLabel.text = scheduleOption["name"]
         cell.dateLabel.text = scheduleOption["date"]
         cell.timeLabel.text = scheduleOption["time"]
@@ -102,6 +121,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.staffLabel.text = scheduleOption["staff"]
 
         return cell
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let journyTableViewController = storyboard?.instantiateViewControllerWithIdentifier("JournyTableViewController") as! JournyTableViewController
+        let selectedCell = tableView.cellForRowAtIndexPath(indexPath) as! ScheduleOptionCell
+
+        journyTableViewController.routeLink = selectedCell.link
+
+        navigationController?.pushViewController(journyTableViewController, animated: true)
     }
 
 }
@@ -113,6 +141,8 @@ class ScheduleOptionCell: UITableViewCell {
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var staffLabel: UILabel!
+
+    var link: String?
 
     override func awakeFromNib() {
         let selectedBackgroundColorView = UIView()

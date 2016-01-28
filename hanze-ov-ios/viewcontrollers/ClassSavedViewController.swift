@@ -19,18 +19,18 @@ class ClassSavedViewController: UIViewController {
     var className: String?
 
     override func viewDidLoad() {
+        navigationItem.title = "Rooster opslaan"
         view.backgroundColor = UIColor(colorCode: "FC9D3D")
 
         classLabel.text = "\(className!) (\(classYear!))"
+
+        button.layer.cornerRadius = 5.0
     }
 
     @IBAction func buttonPressed(sender: UIButton!) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setValue(classId, forKey: "classId")
 
-        print("NSUserDefaults: saved \(classId) forKey: classId")
-
-        // Switch to home view
         let homeViewController = storyboard?.instantiateViewControllerWithIdentifier("TabBarController")
         presentViewController(homeViewController!, animated: true, completion: nil)
     }

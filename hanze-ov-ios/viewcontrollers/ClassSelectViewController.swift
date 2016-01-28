@@ -26,15 +26,31 @@ class ClassSelectViewController: UIViewController, UITableViewDelegate, UITableV
     var groupId: String?
 
     override func viewDidLoad() {
-        navigationController?.navigationBar.topItem?.title = "Rooster"
-
         view.backgroundColor = UIColor(colorCode: "FC9D3D")
         tableView.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1)
 
         selectInfoLabel.backgroundColor = UIColor.orangeColor() // UIColor(red: 0.96, green: 0.75, blue: 0.4, alpha: 1.0)
         selectInfoLabel.textColor = UIColor(white: 0.99, alpha: 0.90)
 
+        navigationController?.navigationBar.barTintColor = view.backgroundColor
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.translucent = false
+        
+        setNavigationTitle()
         setupTableViewSelection()
+    }
+
+    private func setNavigationTitle() {
+        switch selectState {
+        case .Institute:
+            navigationItem.title = "Instituut"
+
+            break
+        case .Class:
+            navigationItem.title = "Klas"
+
+            break
+        }
     }
 
     private func setupTableViewSelection() {

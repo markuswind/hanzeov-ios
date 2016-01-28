@@ -3,64 +3,97 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JournyOptionCell" rowHeight="80" id="eav-XI-dpe" customClass="JournyOptionCell" customModule="hanze_ov_ios" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="JournyOptionCell" rowHeight="80" id="eav-XI-dpe" customClass="JournyOptionCell" customModule="hanze_ov_ios" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eav-XI-dpe" id="j7u-cC-ie8">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <rect key="frame" x="0.0" y="0.0" width="287" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder-institute.png" translatesAutoresizingMaskIntoConstraints="NO" id="YjW-51-5MW" userLabel="vehicleImage">
-                        <rect key="frame" x="8" y="8" width="60" height="60"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus.png" translatesAutoresizingMaskIntoConstraints="NO" id="YjW-51-5MW" userLabel="vehicleImage">
+                        <rect key="frame" x="8" y="51" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="9fJ-ne-m6f"/>
+                            <constraint firstAttribute="width" secondItem="YjW-51-5MW" secondAttribute="height" multiplier="1:1" id="a8v-2u-rE3"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="boarding point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B59-Ma-HQ5" userLabel="boardingPointLabel">
-                        <rect key="frame" x="76" y="9" width="180" height="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="boarding point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B59-Ma-HQ5" userLabel="boardingPointLabel">
+                        <rect key="frame" x="8" y="8" width="229" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIb-9v-cTG" userLabel="boardingTimeLabel">
-                        <rect key="frame" x="273" y="7" width="39" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrd-UB-koc" userLabel="boardingTimeLabel">
+                        <rect key="frame" x="245" y="25" width="34" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="14:02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnV-Ck-7bq" userLabel="arravingTimeLabel">
-                        <rect key="frame" x="273" y="25" width="39" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnV-Ck-7bq" userLabel="boardingDateLabel">
+                        <rect key="frame" x="245" y="8" width="34" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="over 10 minuten.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06A-DZ-C3j" userLabel="timeUntilLabel">
-                        <rect key="frame" x="76" y="53" width="115" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06A-DZ-C3j" userLabel="numberLabel">
+                        <rect key="frame" x="32" y="55" width="153" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="arraving point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhe-0b-Ho8" userLabel="arrivingPointLabel">
-                        <rect key="frame" x="76" y="25" width="181" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="arraving point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhe-0b-Ho8" userLabel="arrivingPointLabel">
+                        <rect key="frame" x="8" y="25" width="229" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-01-29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIb-9v-cTG" userLabel="boardingTimeLabel">
+                        <rect key="frame" x="208" y="52" width="71" height="15"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="pIb-9v-cTG" secondAttribute="trailing" id="59a-t3-pOK"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VnV-Ck-7bq" secondAttribute="trailing" id="6ZN-0n-iNp"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="B59-Ma-HQ5" secondAttribute="leading" id="96k-V1-c3K"/>
+                    <constraint firstItem="06A-DZ-C3j" firstAttribute="leading" secondItem="YjW-51-5MW" secondAttribute="trailing" constant="4" id="9KJ-13-izC"/>
+                    <constraint firstItem="YjW-51-5MW" firstAttribute="top" secondItem="Rhe-0b-Ho8" secondAttribute="bottom" constant="10" id="9fD-zW-nGo"/>
+                    <constraint firstAttribute="topMargin" secondItem="VnV-Ck-7bq" secondAttribute="top" id="Bg0-88-7Wm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="YjW-51-5MW" secondAttribute="bottom" id="CwI-qg-x0s"/>
+                    <constraint firstItem="06A-DZ-C3j" firstAttribute="centerY" secondItem="YjW-51-5MW" secondAttribute="centerY" id="DE3-GF-nqg"/>
+                    <constraint firstAttribute="topMargin" secondItem="B59-Ma-HQ5" secondAttribute="top" id="EVN-4U-0HI"/>
+                    <constraint firstItem="Rhe-0b-Ho8" firstAttribute="top" secondItem="B59-Ma-HQ5" secondAttribute="bottom" constant="1" id="FDt-TI-adX"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Rhe-0b-Ho8" secondAttribute="leading" id="WRV-9Y-GfL"/>
+                    <constraint firstItem="pIb-9v-cTG" firstAttribute="top" secondItem="xrd-UB-koc" secondAttribute="bottom" constant="11" id="bgP-b7-Sxh"/>
+                    <constraint firstItem="VnV-Ck-7bq" firstAttribute="leading" secondItem="B59-Ma-HQ5" secondAttribute="trailing" constant="8" id="fqh-ev-fSU"/>
+                    <constraint firstItem="xrd-UB-koc" firstAttribute="top" secondItem="VnV-Ck-7bq" secondAttribute="bottom" constant="1" id="gI5-Kc-uBl"/>
+                    <constraint firstItem="xrd-UB-koc" firstAttribute="leading" secondItem="Rhe-0b-Ho8" secondAttribute="trailing" constant="8" id="lj9-TO-Qwy"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xrd-UB-koc" secondAttribute="trailing" id="mJ0-K4-JTa"/>
+                    <constraint firstItem="pIb-9v-cTG" firstAttribute="leading" secondItem="06A-DZ-C3j" secondAttribute="trailing" constant="23" id="sKI-CX-ALs"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="YjW-51-5MW" secondAttribute="leading" id="ypp-dB-9U7"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="arrivingPointLabel" destination="Rhe-0b-Ho8" id="OUR-c0-dZa"/>
-                <outlet property="arrivingTimeLabel" destination="VnV-Ck-7bq" id="UwX-JX-Ohk"/>
-                <outlet property="boardingPointLabel" destination="B59-Ma-HQ5" id="DpI-Fn-Bue"/>
-                <outlet property="boardingTimeLabel" destination="pIb-9v-cTG" id="61W-p6-Oft"/>
-                <outlet property="timeUntilLabel" destination="06A-DZ-C3j" id="1n8-fr-7CB"/>
-                <outlet property="vehicleImage" destination="YjW-51-5MW" id="Bed-f0-toS"/>
+                <outlet property="arrivalLocationLabel" destination="Rhe-0b-Ho8" id="sT8-j4-7rv"/>
+                <outlet property="arrivalTimeLabel" destination="xrd-UB-koc" id="C5v-y2-y2o"/>
+                <outlet property="dateLabel" destination="pIb-9v-cTG" id="qoB-pF-boG"/>
+                <outlet property="departureLocationLabel" destination="B59-Ma-HQ5" id="ER6-lH-MsD"/>
+                <outlet property="departureTimeLabel" destination="VnV-Ck-7bq" id="mbn-7V-ecE"/>
+                <outlet property="modeImageView" destination="YjW-51-5MW" id="Pke-83-ExA"/>
+                <outlet property="numberLabel" destination="06A-DZ-C3j" id="xJM-Va-WS0"/>
             </connections>
             <point key="canvasLocation" x="279" y="158"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="placeholder-institute.png" width="700" height="701"/>
+        <image name="bus.png" width="48" height="48"/>
     </resources>
 </document>
