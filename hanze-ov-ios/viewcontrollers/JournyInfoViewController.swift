@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 import SwiftyJSON
 
 class JournyInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -45,6 +46,10 @@ class JournyInfoViewController: UIViewController, UITableViewDelegate, UITableVi
 
         startImageView?.image = UIImage(named: "star.png")?.imageWithRenderingMode(.AlwaysTemplate)
         startImageView?.tintColor = UIColor(colorCode: "888888")
+        startImageView.userInteractionEnabled = true
+
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("starButtonClicked:"))
+        startImageView.addGestureRecognizer(tapRecognizer)
 
         typeImageView?.image = UIImage(named: "bus.png")?.imageWithRenderingMode(.AlwaysTemplate)
         typeImageView?.tintColor = UIColor(colorCode: "888888")
@@ -80,8 +85,23 @@ class JournyInfoViewController: UIViewController, UITableViewDelegate, UITableVi
         dateLabel.text = journyInfo["departure_date"].stringValue
     }
 
-    private func starButtonClicked() {
+    func starButtonClicked(gestureRecognizer: UITapGestureRecognizer) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let token = defaults.valueForKey("token")
 
+        let parameters = [
+            "uid": uid!,
+        ]
+
+        if let _ = token {
+            Alamofire.request(.POST, "http://localhost:8000/reservation/" + (token! as! String), parameters: parameters).responseJSON { response in
+                if let _ = response.response {
+                    self.startImageView.tintColor = UIColor.orangeColor()
+                }
+            }
+        } else {
+            print("user is not logged in, should show alert or something")
+        }
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
