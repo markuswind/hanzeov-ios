@@ -57,6 +57,7 @@
 		28FC8A711C5A9B7E0052D52A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A701C5A9B7E0052D52A /* AccountViewController.swift */; };
 		28FC8A731C5A9E340052D52A /* String+Replace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A721C5A9E340052D52A /* String+Replace.swift */; };
 		28FC8A771C5AAA270052D52A /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28FC8A761C5AAA270052D52A /* MenuItemCell.xib */; };
+		28FC8A791C5AB9820052D52A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A781C5AB9820052D52A /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -125,6 +126,7 @@
 		28FC8A701C5A9B7E0052D52A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		28FC8A721C5A9E340052D52A /* String+Replace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Replace.swift"; sourceTree = "<group>"; };
 		28FC8A761C5AAA270052D52A /* MenuItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
+		28FC8A781C5AB9820052D52A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				2815E8871C58E7E700E431FC /* MenuViewController.swift */,
 				288389601C4D6880009C1D01 /* NavigationController.swift */,
 				283E6AB21C4E90660099521F /* TabBarController.swift */,
+				28FC8A781C5AB9820052D52A /* LoginViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28FC8A791C5AB9820052D52A /* LoginViewController.swift in Sources */,
 				2815E88E1C58E8FF00E431FC /* ClassSelectViewController.swift in Sources */,
 				28FC8A6F1C5A46180052D52A /* JournyInfoViewController.swift in Sources */,
 				28FC8A711C5A9B7E0052D52A /* AccountViewController.swift in Sources */,

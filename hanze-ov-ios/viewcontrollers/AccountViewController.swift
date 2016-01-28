@@ -31,4 +31,10 @@ class AccountViewController: UIViewController {
         addressLabel.text = addressTextField.text!
     }
 
+    @IBAction func loginButtonClicked(sender: UIButton!) {
+        let loginViewController = storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+
+        navigationController?.pushViewController(loginViewController, animated: true)
+    }
+
 }
