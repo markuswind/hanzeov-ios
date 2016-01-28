@@ -80,6 +80,10 @@ class JournyInfoViewController: UIViewController, UITableViewDelegate, UITableVi
         dateLabel.text = journyInfo["departure_date"].stringValue
     }
 
+    private func starButtonClicked() {
+
+    }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return journyInfo["parts"].count
     }
@@ -94,7 +98,7 @@ class JournyInfoViewController: UIViewController, UITableViewDelegate, UITableVi
         // set label texts
         cell.departureLocationLabel.text = firstStopValue["location"].stringValue + " - " + firstStopValue["place"].stringValue
         cell.arrivalLocationLabel.text = lastStopValue["location"].stringValue + " - " + lastStopValue["place"].stringValue
-        cell.departureTimeLabel.text = firstStopValue["departure"].stringValue
+        cell.departureTimeLabel.text = stripTimeString(firstStopValue["departure"].stringValue)
         cell.arrivalTimeLabel.text = ""
         cell.numberLabel.text = partValue["number"].stringValue
         cell.dateLabel.text = ""
@@ -104,6 +108,12 @@ class JournyInfoViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.modeImageView?.tintColor = UIColor(colorCode: "888888")
         
         return cell
+    }
+
+    private func stripTimeString(string: String) -> String {
+        let subStr = string[string.startIndex.advancedBy(11)...string.startIndex.advancedBy(15)]
+
+        return subStr
     }
 
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {

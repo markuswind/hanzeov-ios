@@ -56,6 +56,7 @@
 		28FC8A6F1C5A46180052D52A /* JournyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A6E1C5A46180052D52A /* JournyInfoViewController.swift */; };
 		28FC8A711C5A9B7E0052D52A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A701C5A9B7E0052D52A /* AccountViewController.swift */; };
 		28FC8A731C5A9E340052D52A /* String+Replace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A721C5A9E340052D52A /* String+Replace.swift */; };
+		28FC8A771C5AAA270052D52A /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28FC8A761C5AAA270052D52A /* MenuItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -123,6 +124,7 @@
 		28FC8A6E1C5A46180052D52A /* JournyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournyInfoViewController.swift; sourceTree = "<group>"; };
 		28FC8A701C5A9B7E0052D52A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		28FC8A721C5A9E340052D52A /* String+Replace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Replace.swift"; sourceTree = "<group>"; };
+		28FC8A761C5AAA270052D52A /* MenuItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				28CE44961C43271400E4CA04 /* InstituteOptionCell.xib */,
 				28CE44981C43292B00E4CA04 /* ClassOptionCell.xib */,
 				2832209B1C43B8F0002D0B2C /* ScheduleOptionCell.xib */,
+				28FC8A761C5AAA270052D52A /* MenuItemCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2815E8AA1C592DE500E431FC /* airballoon.png in Resources */,
+				28FC8A771C5AAA270052D52A /* MenuItemCell.xib in Resources */,
 				280214EE1C42F4030089EB0B /* LaunchScreen.storyboard in Resources */,
 				2815E8AD1C592DE500E431FC /* briefcase.png in Resources */,
 				2815E8941C58E9C400E431FC /* account.png in Resources */,
