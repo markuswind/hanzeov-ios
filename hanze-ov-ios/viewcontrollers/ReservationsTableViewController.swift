@@ -24,6 +24,14 @@ class ReservationsTableViewController: UITableViewController {
         navigationController?.navigationBar.tintColor = view.backgroundColor
         navigationController?.navigationBar.translucent = false
 
+        loadReservations()
+    }
+
+    override func viewWillAppear(animated: Bool) {
+       loadReservations()
+    }
+
+    private func loadReservations() {
         let defaults = NSUserDefaults.standardUserDefaults()
         let token = defaults.valueForKey("token")
 
