@@ -44,18 +44,22 @@ class JournyTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("JournyOptionCell", forIndexPath: indexPath) as! JournyOptionCell
 
         let value = journyOptions[indexPath.row]
-        let partsValue = value["parts"]
-        let stopsValue = partsValue["stops"]
+        let firstPartValue = value["parts"][0]
+        let lastPartValue = value["parts"][value["parts"].count - 1]
+        let stopsValue = firstPartValue["stops"]
 
-        cell.link = value["GET-route"].stringValue
+        // set uuid for use in info view
+        cell.uid = value["uid"].stringValue
 
+        // set label texts
         cell.departureLocationLabel.text = stopsValue[0]["location"].stringValue ?? "Locatie onbekend"
-        cell.arrivalLocationLabel.text = partsValue["destination"].stringValue ?? "Locatie onbekend"
+        cell.arrivalLocationLabel.text = lastPartValue["destination"].stringValue ?? "Locatie onbekend"
         cell.departureTimeLabel.text = value["departure_time"].stringValue ?? "-"
         cell.arrivalTimeLabel.text = value["arrival_time"].stringValue ?? "-"
-        cell.numberLabel.text = partsValue["number"].stringValue ?? "??"
+        cell.numberLabel.text = "\(firstPartValue["number"]) (\(value["num_changes"])x overstappen)"
         cell.dateLabel.text = value["departure_date"].stringValue ?? "??/??/??"
 
+        // set image
         cell.modeImageView?.image = UIImage(named: "bus.png")?.imageWithRenderingMode(.AlwaysTemplate)
         cell.modeImageView?.tintColor = UIColor(colorCode: "888888")
 
@@ -63,12 +67,13 @@ class JournyTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-//        let selectViewController = storyboard?.instantiateViewControllerWithIdentifier("JournyInfoViewController") as! JournyInfoViewController
-//        let selectedCell = tableView.cellForRowAtIndexPath(indexPath) as! JournyOptionCell
+        let journyInfoViewController = storyboard?.instantiateViewControllerWithIdentifier("JournyInfoViewController") as! JournyInfoViewController
+        let selectedCell = tableView.cellForRowAtIndexPath(indexPath) as! JournyOptionCell
 
-//        journyInfoViewController.link = selectedCell.link!
+        journyInfoViewController.routeLink = routeLink
+        journyInfoViewController.uid = selectedCell.uid
 
-//        navigationController?.pushViewController(JournyInfoViewController, animated: true)
+        navigationController?.pushViewController(journyInfoViewController, animated: true)
 
         return indexPath
     }
@@ -85,6 +90,6 @@ class JournyOptionCell: UITableViewCell {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var numberLabel: UILabel!
 
-    var link: String?
+    var uid: String?
 
 }

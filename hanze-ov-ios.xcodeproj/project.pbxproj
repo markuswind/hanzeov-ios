@@ -53,6 +53,7 @@
 		28CF52941C4458AB00E54F12 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF52931C4458AB00E54F12 /* SwiftyJSON.framework */; };
 		28CF52951C4458AB00E54F12 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF52931C4458AB00E54F12 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28FC8A6D1C5A27F70052D52A /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = 28FC8A6C1C5A27F70052D52A /* bus.png */; };
+		28FC8A6F1C5A46180052D52A /* JournyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A6E1C5A46180052D52A /* JournyInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -117,6 +118,7 @@
 		28CE44981C43292B00E4CA04 /* ClassOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassOptionCell.xib; sourceTree = "<group>"; };
 		28CF52931C4458AB00E54F12 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		28FC8A6C1C5A27F70052D52A /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus.png; path = images/icons/bus.png; sourceTree = "<group>"; };
+		28FC8A6E1C5A46180052D52A /* JournyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournyInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				285AED141C57B7EE0001EFD8 /* ClassSavedViewController.swift */,
 				285AED161C57DDA30001EFD8 /* HomeViewController.swift */,
 				283BD0F41C483C5000BC6A3A /* JournyTableViewController.swift */,
+				28FC8A6E1C5A46180052D52A /* JournyInfoViewController.swift */,
 				2815E8871C58E7E700E431FC /* MenuViewController.swift */,
 				288389601C4D6880009C1D01 /* NavigationController.swift */,
 				283E6AB21C4E90660099521F /* TabBarController.swift */,
@@ -367,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2815E88E1C58E8FF00E431FC /* ClassSelectViewController.swift in Sources */,
+				28FC8A6F1C5A46180052D52A /* JournyInfoViewController.swift in Sources */,
 				283BD0F51C483C5000BC6A3A /* JournyTableViewController.swift in Sources */,
 				285AED151C57B7EE0001EFD8 /* ClassSavedViewController.swift in Sources */,
 				283E6AB31C4E90660099521F /* TabBarController.swift in Sources */,
