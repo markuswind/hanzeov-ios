@@ -455,6 +455,35 @@
             </objects>
             <point key="canvasLocation" x="270" y="2011"/>
         </scene>
+        <!--Reservations Table View Controller-->
+        <scene sceneID="AAm-Sh-Vjf">
+            <objects>
+                <tableViewController storyboardIdentifier="ReservationsTableViewController" id="46b-lX-BTH" customClass="ReservationsTableViewController" customModule="hanze_ov_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="STo-ZD-Utc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="S7I-oG-net">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S7I-oG-net" id="AtX-j4-LEf">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="46b-lX-BTH" id="WAl-97-8SB"/>
+                            <outlet property="delegate" destination="46b-lX-BTH" id="1ul-I2-7Vb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="nfN-WB-y86"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZ8-Ld-klH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-472" y="2836"/>
+        </scene>
         <!--Account View Controller-->
         <scene sceneID="le2-SC-KDv">
             <objects>
@@ -697,15 +726,18 @@
             </objects>
             <point key="canvasLocation" x="1038" y="2825"/>
         </scene>
-        <!--Routes-->
+        <!--Reserveringen-->
         <scene sceneID="pih-4g-hTQ">
             <objects>
                 <navigationController id="3gO-HJ-2W9" customClass="NavigationController" customModule="hanze_ov_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Routes" image="star.png" id="TWM-8X-jSv"/>
+                    <tabBarItem key="tabBarItem" title="Reserveringen" image="star.png" id="TWM-8X-jSv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="izh-8B-xTc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="46b-lX-BTH" kind="relationship" relationship="rootViewController" id="BNI-c0-vqx"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhx-h1-gTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

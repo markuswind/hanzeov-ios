@@ -59,6 +59,8 @@
 		28FC8A771C5AAA270052D52A /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28FC8A761C5AAA270052D52A /* MenuItemCell.xib */; };
 		28FC8A791C5AB9820052D52A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A781C5AB9820052D52A /* LoginViewController.swift */; };
 		28FC8A7B1C5ABD850052D52A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A7A1C5ABD850052D52A /* RegisterViewController.swift */; };
+		28FC8A7D1C5AC5920052D52A /* ReservationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A7C1C5AC5920052D52A /* ReservationsTableViewController.swift */; };
+		28FC8A7F1C5AC7CF0052D52A /* ReservationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28FC8A7E1C5AC7CF0052D52A /* ReservationCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -129,6 +131,8 @@
 		28FC8A761C5AAA270052D52A /* MenuItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
 		28FC8A781C5AB9820052D52A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28FC8A7A1C5ABD850052D52A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		28FC8A7C1C5AC5920052D52A /* ReservationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationsTableViewController.swift; sourceTree = "<group>"; };
+		28FC8A7E1C5AC7CF0052D52A /* ReservationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReservationCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 				288389601C4D6880009C1D01 /* NavigationController.swift */,
 				283E6AB21C4E90660099521F /* TabBarController.swift */,
 				28FC8A7A1C5ABD850052D52A /* RegisterViewController.swift */,
+				28FC8A7C1C5AC5920052D52A /* ReservationsTableViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				28CE44981C43292B00E4CA04 /* ClassOptionCell.xib */,
 				2832209B1C43B8F0002D0B2C /* ScheduleOptionCell.xib */,
 				28FC8A761C5AAA270052D52A /* MenuItemCell.xib */,
+				28FC8A7E1C5AC7CF0052D52A /* ReservationCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 				2815E8B81C592DE500E431FC /* school.png in Resources */,
 				2815E8951C58E9C400E431FC /* home.png in Resources */,
 				285AED111C57B49E0001EFD8 /* exam-schedule-placeholder.png in Resources */,
+				28FC8A7F1C5AC7CF0052D52A /* ReservationCell.xib in Resources */,
 				28CE44991C43292B00E4CA04 /* ClassOptionCell.xib in Resources */,
 				2815E8971C58E9C400E431FC /* star.png in Resources */,
 				2815E8961C58E9C400E431FC /* information.png in Resources */,
@@ -399,6 +406,7 @@
 				28FC8A731C5A9E340052D52A /* String+Replace.swift in Sources */,
 				280214E41C42F4030089EB0B /* AppDelegate.swift in Sources */,
 				2815E88C1C58E8F000E431FC /* UIColor+HexCode.swift in Sources */,
+				28FC8A7D1C5AC5920052D52A /* ReservationsTableViewController.swift in Sources */,
 				285AED171C57DDA30001EFD8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
