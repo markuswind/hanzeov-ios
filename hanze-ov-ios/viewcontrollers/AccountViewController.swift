@@ -14,13 +14,24 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
 
+    @IBOutlet weak var loginStatusLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
+
     override func viewDidLoad() {
         let defaults = NSUserDefaults.standardUserDefaults()
         let location = defaults.valueForKey("location")
+        let token = defaults.valueForKey("token")
 
         if location != nil {
             addressTextField.text = location as? String
             addressLabel.text = location as? String
+        }
+
+        if token != nil {
+            loginStatusLabel.text = "U bent ingelogd"
+            loginButton.enabled = false
+            logoutButton.enabled = true
         }
     }
 
@@ -35,6 +46,14 @@ class AccountViewController: UIViewController {
         let loginViewController = storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
 
         navigationController?.pushViewController(loginViewController, animated: true)
+    }
+
+    @IBAction func logoutButtonClicked(sender: UIButton!) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.removeObjectForKey("token")
+
+        loginButton.enabled = true
+        logoutButton.enabled = false
     }
 
 }
