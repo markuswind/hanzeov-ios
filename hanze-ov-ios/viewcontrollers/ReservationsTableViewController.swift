@@ -39,6 +39,9 @@ class ReservationsTableViewController: UITableViewController {
             Client.sharedClient.performRequestWithMethod(.GET, path: "/reservation/" + (token as! String), parameters: nil, completion: fillJournyOptions)
         } else {
             print("user is not logged, should show message/warning")
+
+            reservations = []
+            tableView.reloadData()
         }
     }
 
