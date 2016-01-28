@@ -54,6 +54,8 @@
 		28CF52951C4458AB00E54F12 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF52931C4458AB00E54F12 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28FC8A6D1C5A27F70052D52A /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = 28FC8A6C1C5A27F70052D52A /* bus.png */; };
 		28FC8A6F1C5A46180052D52A /* JournyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A6E1C5A46180052D52A /* JournyInfoViewController.swift */; };
+		28FC8A711C5A9B7E0052D52A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A701C5A9B7E0052D52A /* AccountViewController.swift */; };
+		28FC8A731C5A9E340052D52A /* String+Replace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC8A721C5A9E340052D52A /* String+Replace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -119,6 +121,8 @@
 		28CF52931C4458AB00E54F12 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		28FC8A6C1C5A27F70052D52A /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus.png; path = images/icons/bus.png; sourceTree = "<group>"; };
 		28FC8A6E1C5A46180052D52A /* JournyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournyInfoViewController.swift; sourceTree = "<group>"; };
+		28FC8A701C5A9B7E0052D52A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		28FC8A721C5A9E340052D52A /* String+Replace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Replace.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 		280214F61C42F5450089EB0B /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				28FC8A701C5A9B7E0052D52A /* AccountViewController.swift */,
 				2815E88D1C58E8FF00E431FC /* ClassSelectViewController.swift */,
 				285AED141C57B7EE0001EFD8 /* ClassSavedViewController.swift */,
 				285AED161C57DDA30001EFD8 /* HomeViewController.swift */,
@@ -263,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				2815E88B1C58E8F000E431FC /* UIColor+HexCode.swift */,
+				28FC8A721C5A9E340052D52A /* String+Replace.swift */,
 			);
 			name = categories;
 			sourceTree = "<group>";
@@ -371,12 +377,14 @@
 			files = (
 				2815E88E1C58E8FF00E431FC /* ClassSelectViewController.swift in Sources */,
 				28FC8A6F1C5A46180052D52A /* JournyInfoViewController.swift in Sources */,
+				28FC8A711C5A9B7E0052D52A /* AccountViewController.swift in Sources */,
 				283BD0F51C483C5000BC6A3A /* JournyTableViewController.swift in Sources */,
 				285AED151C57B7EE0001EFD8 /* ClassSavedViewController.swift in Sources */,
 				283E6AB31C4E90660099521F /* TabBarController.swift in Sources */,
 				2815E88A1C58E8E300E431FC /* Client.swift in Sources */,
 				288389611C4D6880009C1D01 /* NavigationController.swift in Sources */,
 				2815E8881C58E7E700E431FC /* MenuViewController.swift in Sources */,
+				28FC8A731C5A9E340052D52A /* String+Replace.swift in Sources */,
 				280214E41C42F4030089EB0B /* AppDelegate.swift in Sources */,
 				2815E88C1C58E8F000E431FC /* UIColor+HexCode.swift in Sources */,
 				285AED171C57DDA30001EFD8 /* HomeViewController.swift in Sources */,

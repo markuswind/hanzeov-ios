@@ -211,13 +211,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hoofdstation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTi-K7-Jvy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hoofdstation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="FTi-K7-Jvy">
                                 <rect key="frame" x="72" y="60" width="463" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Zernike campus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKV-EC-1Eg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Zernike campus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="vKV-EC-1Eg">
                                 <rect key="frame" x="73" y="89" width="123" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -354,10 +354,10 @@
             </objects>
             <point key="canvasLocation" x="270" y="2011"/>
         </scene>
-        <!--View Controller-->
+        <!--Account View Controller-->
         <scene sceneID="le2-SC-KDv">
             <objects>
-                <viewController id="IEM-G2-Mgs" sceneMemberID="viewController">
+                <viewController id="IEM-G2-Mgs" customClass="AccountViewController" customModule="hanze_ov_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uu5-wB-3N2"/>
                         <viewControllerLayoutGuide type="bottom" id="nZi-Hx-qlh"/>
@@ -365,9 +365,51 @@
                     <view key="view" contentMode="scaleToFill" id="3jT-Ft-8bo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Adres" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cca-ep-VSr">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Huidige adres:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mi5-TC-KP1">
+                                <rect key="frame" x="245" y="110" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groningen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWf-UT-vxU">
+                                <rect key="frame" x="260" y="139" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ja-q1-xVY">
+                                <rect key="frame" x="279" y="168" width="42" height="30"/>
+                                <state key="normal" title="Wijzig"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="IEM-G2-Mgs" eventType="touchUpInside" id="mBi-7K-Z6y"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="cca-ep-VSr" secondAttribute="trailing" id="9WY-Pb-cXJ"/>
+                            <constraint firstItem="AWf-UT-vxU" firstAttribute="top" secondItem="Mi5-TC-KP1" secondAttribute="bottom" constant="8" id="Cki-0T-r2L"/>
+                            <constraint firstItem="cca-ep-VSr" firstAttribute="top" secondItem="uu5-wB-3N2" secondAttribute="bottom" constant="8" id="KQ1-OT-Piz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="cca-ep-VSr" secondAttribute="leading" id="So2-v4-0p7"/>
+                            <constraint firstItem="Mi5-TC-KP1" firstAttribute="centerX" secondItem="3jT-Ft-8bo" secondAttribute="centerX" id="Tdk-xm-YPo"/>
+                            <constraint firstItem="AWf-UT-vxU" firstAttribute="centerX" secondItem="3jT-Ft-8bo" secondAttribute="centerX" id="Yrq-Vh-BDh"/>
+                            <constraint firstItem="Mi5-TC-KP1" firstAttribute="top" secondItem="cca-ep-VSr" secondAttribute="bottom" constant="8" id="bws-C0-NTj"/>
+                            <constraint firstItem="0ja-q1-xVY" firstAttribute="centerX" secondItem="3jT-Ft-8bo" secondAttribute="centerX" id="l8x-av-28u"/>
+                            <constraint firstItem="0ja-q1-xVY" firstAttribute="top" secondItem="AWf-UT-vxU" secondAttribute="bottom" constant="8" id="nI1-6Q-oWu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ybx-pZ-bRS"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="AWf-UT-vxU" id="h1K-3E-uAP"/>
+                        <outlet property="addressTextField" destination="cca-ep-VSr" id="XiQ-3e-3pk"/>
+                        <outlet property="saveButton" destination="0ja-q1-xVY" id="QUa-vU-zly"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDq-KC-7zP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

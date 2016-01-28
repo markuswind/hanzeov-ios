@@ -25,6 +25,13 @@ class JournyTableViewController: UITableViewController {
         navigationController?.navigationBar.tintColor = view.backgroundColor
         navigationController?.navigationBar.translucent = false
 
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let location = defaults.valueForKey("location")
+
+        if location != nil {
+            routeLink = routeLink?.replace("Groningen", withString: location as! String)
+        }
+
         routeLink = routeLink?.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet())
 
         Client.sharedClient.performRequestWithMethod(.GET, path: "/" + routeLink!, parameters: nil, completion: fillJournyOptions)
