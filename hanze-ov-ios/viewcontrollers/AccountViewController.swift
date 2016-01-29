@@ -42,6 +42,12 @@ class AccountViewController: UIViewController {
         addressLabel.text = addressTextField.text!
     }
 
+    @IBAction func editScheduleButtonClicked(sender: UIButton!) {
+        let classSelectViewControler = storyboard?.instantiateViewControllerWithIdentifier("ClassSelectViewController") as! ClassSelectViewController
+
+        navigationController?.pushViewController(classSelectViewControler, animated: true)
+    }
+
     @IBAction func loginButtonClicked(sender: UIButton!) {
         let loginViewController = storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
 

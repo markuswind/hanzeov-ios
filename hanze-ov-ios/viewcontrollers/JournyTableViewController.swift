@@ -32,7 +32,8 @@ class JournyTableViewController: UITableViewController {
             routeLink = routeLink?.replace("Groningen", withString: location as! String)
         }
 
-        routeLink = routeLink?.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet())
+//        routeLink = routeLink?.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet())
+        routeLink = routeLink?.replace(" ", withString: "%20")
 
         Client.sharedClient.performRequestWithMethod(.GET, path: "/" + routeLink!, parameters: nil, completion: fillJournyOptions)
     }
