@@ -194,18 +194,13 @@
 		280214F61C42F5450089EB0B /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				28FC8A701C5A9B7E0052D52A /* AccountViewController.swift */,
-				2815E88D1C58E8FF00E431FC /* ClassSelectViewController.swift */,
-				285AED141C57B7EE0001EFD8 /* ClassSavedViewController.swift */,
-				285AED161C57DDA30001EFD8 /* HomeViewController.swift */,
-				283BD0F41C483C5000BC6A3A /* JournyTableViewController.swift */,
-				28FC8A6E1C5A46180052D52A /* JournyInfoViewController.swift */,
-				28FC8A781C5AB9820052D52A /* LoginViewController.swift */,
-				2815E8871C58E7E700E431FC /* MenuViewController.swift */,
+				2851D1971C5E64A1007699A2 /* welcome */,
+				2851D19B1C5E64D2007699A2 /* schedule */,
+				2851D1991C5E64BD007699A2 /* reservations */,
+				2851D1981C5E64B0007699A2 /* account */,
+				2851D19A1C5E64CA007699A2 /* menu */,
 				288389601C4D6880009C1D01 /* NavigationController.swift */,
 				283E6AB21C4E90660099521F /* TabBarController.swift */,
-				28FC8A7A1C5ABD850052D52A /* RegisterViewController.swift */,
-				28FC8A7C1C5AC5920052D52A /* ReservationsTableViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -267,11 +262,56 @@
 			name = institute;
 			sourceTree = "<group>";
 		};
+		2851D1971C5E64A1007699A2 /* welcome */ = {
+			isa = PBXGroup;
+			children = (
+				2815E88D1C58E8FF00E431FC /* ClassSelectViewController.swift */,
+				285AED141C57B7EE0001EFD8 /* ClassSavedViewController.swift */,
+			);
+			name = welcome;
+			sourceTree = "<group>";
+		};
+		2851D1981C5E64B0007699A2 /* account */ = {
+			isa = PBXGroup;
+			children = (
+				28FC8A7A1C5ABD850052D52A /* RegisterViewController.swift */,
+				28FC8A781C5AB9820052D52A /* LoginViewController.swift */,
+				28FC8A701C5A9B7E0052D52A /* AccountViewController.swift */,
+			);
+			name = account;
+			sourceTree = "<group>";
+		};
+		2851D1991C5E64BD007699A2 /* reservations */ = {
+			isa = PBXGroup;
+			children = (
+				28FC8A7C1C5AC5920052D52A /* ReservationsTableViewController.swift */,
+			);
+			name = reservations;
+			sourceTree = "<group>";
+		};
+		2851D19A1C5E64CA007699A2 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				2815E8871C58E7E700E431FC /* MenuViewController.swift */,
+			);
+			name = menu;
+			sourceTree = "<group>";
+		};
+		2851D19B1C5E64D2007699A2 /* schedule */ = {
+			isa = PBXGroup;
+			children = (
+				285AED161C57DDA30001EFD8 /* HomeViewController.swift */,
+				283BD0F41C483C5000BC6A3A /* JournyTableViewController.swift */,
+				28FC8A6E1C5A46180052D52A /* JournyInfoViewController.swift */,
+			);
+			name = schedule;
+			sourceTree = "<group>";
+		};
 		28CE449C1C43307D00E4CA04 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				28FC8A6C1C5A27F70052D52A /* bus.png */,
 				2815E88F1C58E9B600E431FC /* icons */,
+				28FC8A6C1C5A27F70052D52A /* bus.png */,
 				285AED0E1C57B49E0001EFD8 /* exam-schedule-placeholder.png */,
 				285AED0F1C57B49E0001EFD8 /* placeholder-institute.png */,
 				285AED101C57B49E0001EFD8 /* placeholder.jpg */,

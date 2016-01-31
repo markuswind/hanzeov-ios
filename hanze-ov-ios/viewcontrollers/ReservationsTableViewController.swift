@@ -32,6 +32,7 @@ class ReservationsTableViewController: UITableViewController {
     }
 
     private func loadReservations() {
+        // FIXME:: --workaround; should use sharedClient (token should be added from there)
         let defaults = NSUserDefaults.standardUserDefaults()
         let token = defaults.valueForKey("token")
 

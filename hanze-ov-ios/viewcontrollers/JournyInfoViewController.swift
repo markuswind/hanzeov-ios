@@ -89,6 +89,7 @@ class JournyInfoViewController: UIViewController, UITableViewDelegate, UITableVi
         let defaults = NSUserDefaults.standardUserDefaults()
         let token = defaults.valueForKey("token")
 
+        // FIXME:: --workaround; should use sharedClient (token should be added from there)
         let parameters = [
             "uid": uid!,
         ]
@@ -137,7 +138,6 @@ class JournyInfoViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-
         return indexPath
     }
 

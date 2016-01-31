@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonPressed() {
+        // FIXME:: --workaround; should use sharedClient but response is in different block
         let parameters = [
             "email": emailTextField.text!,
             "password": passwordTextField.text!

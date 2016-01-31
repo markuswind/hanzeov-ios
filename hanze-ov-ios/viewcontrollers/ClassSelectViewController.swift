@@ -230,6 +230,7 @@ class InstituteOptionCell: UITableViewCell {
     func setInstituteImage(institute: String) {
         var image = "school.png"
 
+        // FIXME
         switch(institute) {
         case "SAGZ":
             image = "food-apple.png"
